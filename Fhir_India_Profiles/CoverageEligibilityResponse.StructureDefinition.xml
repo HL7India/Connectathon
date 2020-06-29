@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://hl7india.org/fhir/StructureDefinition/CoverageEligibilityResponse" />
+  <name value="CoverageEligibilityResponse" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="cdanetv4" />
+    <uri value="http://www.cda-adc.ca/en/services/cdanet/" />
+    <name value="Canadian Dental Association eclaims standard" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CoverageEligibilityResponse" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CoverageEligibilityResponse.patient">
+      <path value="CoverageEligibilityResponse.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="CoverageEligibilityResponse.requestor">
+      <path value="CoverageEligibilityResponse.requestor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="CoverageEligibilityResponse.request">
+      <path value="CoverageEligibilityResponse.request" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/CoverageEligibilityRequest" />
+      </type>
+    </element>
+    <element id="CoverageEligibilityResponse.insurer">
+      <path value="CoverageEligibilityResponse.insurer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="CoverageEligibilityResponse.insurance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
+        <valueString value="380;0" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Insurance" />
+      </extension>
+      <path value="CoverageEligibilityResponse.insurance" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CoverageEligibilityResponse.insurance.item">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
+        <valueString value="340;120" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Items" />
+      </extension>
+      <path value="CoverageEligibilityResponse.insurance.item" />
+    </element>
+    <element id="CoverageEligibilityResponse.insurance.item.category">
+      <path value="CoverageEligibilityResponse.insurance.item.category" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CoverageEligibilityResponse.insurance.item.provider">
+      <path value="CoverageEligibilityResponse.insurance.item.provider" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
+    </element>
+    <element id="CoverageEligibilityResponse.insurance.item.name">
+      <path value="CoverageEligibilityResponse.insurance.item.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CoverageEligibilityResponse.insurance.item.benefit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
+        <valueString value="340;320" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Benefit" />
+      </extension>
+      <path value="CoverageEligibilityResponse.insurance.item.benefit" />
+    </element>
+    <element id="CoverageEligibilityResponse.error">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Errors" />
+      </extension>
+      <path value="CoverageEligibilityResponse.error" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>
