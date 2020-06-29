@@ -1257,7 +1257,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1274,7 +1274,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1331,7 +1331,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1723,7 +1723,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1735,4 +1735,46 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="Location.telecom">
+      <path value="Location.telecom" />
+      <constraint>
+        <key value="cpt-2" />
+        <severity value="error" />
+        <human value="A system is required if a value is provided." />
+        <source value="http://hl7.org/fhir/StructureDefinition/Location" />
+      </constraint>
+    </element>
+    <element id="Location.managingOrganization">
+      <path value="Location.managingOrganization" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+      </constraint>
+    </element>
+    <element id="Location.partOf">
+      <path value="Location.partOf" />
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+      </constraint>
+    </element>
+    <element id="Location.endpoint">
+      <path value="Location.endpoint" />
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+      </constraint>
+    </element>
+  </differential>
 </StructureDefinition>

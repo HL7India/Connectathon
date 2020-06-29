@@ -626,7 +626,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -679,7 +679,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -869,7 +869,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Location" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1677,4 +1677,90 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="PractitionerRole.period">
+      <path value="PractitionerRole.period" />
+      <constraint>
+        <key value="per-1" />
+        <severity value="error" />
+        <human value="If present, start SHALL have a lower value than end" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="PractitionerRole.practitioner">
+      <path value="PractitionerRole.practitioner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="PractitionerRole.organization">
+      <path value="PractitionerRole.organization" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="PractitionerRole.location">
+      <path value="PractitionerRole.location" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Location" />
+      </type>
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="PractitionerRole.healthcareService">
+      <path value="PractitionerRole.healthcareService" />
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <constraint>
+        <key value="cpt-2" />
+        <severity value="error" />
+        <human value="A system is required if a value is provided." />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="PractitionerRole.notAvailable.during">
+      <path value="PractitionerRole.notAvailable.during" />
+      <constraint>
+        <key value="per-1" />
+        <severity value="error" />
+        <human value="If present, start SHALL have a lower value than end" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="PractitionerRole.endpoint">
+      <path value="PractitionerRole.endpoint" />
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+  </differential>
 </StructureDefinition>

@@ -1820,4 +1820,33 @@
       </mapping>
     </element>
   </snapshot>
+  <differential>
+    <element id="FamilyMemberHistory.patient">
+      <path value="FamilyMemberHistory.patient" />
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="FamilyMemberHistory.born[x]">
+      <path value="FamilyMemberHistory.born[x]" />
+      <constraint>
+        <key value="per-1" />
+        <severity value="error" />
+        <human value="If present, start SHALL have a lower value than end" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+    <element id="FamilyMemberHistory.reasonReference">
+      <path value="FamilyMemberHistory.reasonReference" />
+      <constraint>
+        <key value="ref-1" />
+        <severity value="error" />
+        <human value="SHALL have a contained resource if a local reference is provided" />
+        <source value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+      </constraint>
+    </element>
+  </differential>
 </StructureDefinition>
