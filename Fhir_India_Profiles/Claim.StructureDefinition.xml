@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://hl7india.org/StructureDefinition/Claim" />
+  <name value="Claim" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Claim" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Claim" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Claim.patient">
+      <path value="Claim.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Claim.enterer">
+      <path value="Claim.enterer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
+    </element>
+    <element id="Claim.insurer">
+      <path value="Claim.insurer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Claim.provider">
+      <path value="Claim.provider" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Claim.originalPrescription">
+      <path value="Claim.originalPrescription" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/VisionPrescription" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/MedicationRequest" />
+      </type>
+    </element>
+    <element id="Claim.facility">
+      <path value="Claim.facility" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Location" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Claim.careTeam.provider">
+      <path value="Claim.careTeam.provider" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Claim.diagnosis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Diagnosis" />
+      </extension>
+      <path value="Claim.diagnosis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Claim.procedure">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Procedure" />
+      </extension>
+      <path value="Claim.procedure" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Claim.accident">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Accident" />
+      </extension>
+      <path value="Claim.accident" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Claim.accident.location[x]">
+      <path value="Claim.accident.location[x]" />
+      <type>
+        <code value="Address" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Location" />
+      </type>
+    </element>
+    <element id="Claim.item">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Item" />
+      </extension>
+      <path value="Claim.item" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -30,6 +30,36 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
   <derivation value="constraint" />
   <differential>
+    <element id="CarePlan.basedOn">
+      <path value="CarePlan.basedOn" />
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
+          <valueBoolean value="true" />
+        </extension>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/CarePlan" />
+      </type>
+    </element>
+    <element id="CarePlan.replaces">
+      <path value="CarePlan.replaces" />
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
+          <valueBoolean value="true" />
+        </extension>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/CarePlan" />
+      </type>
+    </element>
+    <element id="CarePlan.partOf">
+      <path value="CarePlan.partOf" />
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
+          <valueBoolean value="true" />
+        </extension>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/CarePlan" />
+      </type>
+    </element>
     <element id="CarePlan.subject">
       <path value="CarePlan.subject" />
       <type>
@@ -39,9 +69,46 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="CarePlan.encounter">
+      <path value="CarePlan.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Encounter" />
+      </type>
+    </element>
     <element id="CarePlan.author">
       <path value="CarePlan.author" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
       <mustSupport value="true" />
+    </element>
+    <element id="CarePlan.contributor">
+      <path value="CarePlan.contributor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="CarePlan.addresses">
+      <path value="CarePlan.addresses" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
+      </type>
     </element>
     <element id="CarePlan.goal">
       <path value="CarePlan.goal" />

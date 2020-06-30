@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="17aa1c3c-b3d5-4fdd-b468-a96d097d108c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2020-06-30T13:54:11.647+00:00" />
+  </meta>
+  <url value="http://hl7india.org/fhir/StructureDefinition/ClaimResponse" />
+  <name value="ClaimResponse" />
+  <status value="draft" />
+  <date value="2020-06-30T13:54:11.9107117Z" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ClaimResponse" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ClaimResponse" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ClaimResponse.patient">
+      <path value="ClaimResponse.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="ClaimResponse.insurer">
+      <path value="ClaimResponse.insurer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="ClaimResponse.requestor">
+      <path value="ClaimResponse.requestor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="ClaimResponse.request">
+      <path value="ClaimResponse.request" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Claim" />
+      </type>
+    </element>
+    <element id="ClaimResponse.disposition">
+      <path value="ClaimResponse.disposition" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClaimResponse.item">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Item" />
+      </extension>
+      <path value="ClaimResponse.item" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClaimResponse.addItem.provider">
+      <path value="ClaimResponse.addItem.provider" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="ClaimResponse.addItem.location[x]">
+      <path value="ClaimResponse.addItem.location[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Address" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Location" />
+      </type>
+    </element>
+    <element id="ClaimResponse.adjudication">
+      <path value="ClaimResponse.adjudication" />
+      <mustSupport value="true" />
+    </element>
+    <element id="ClaimResponse.insurance.claimResponse">
+      <path value="ClaimResponse.insurance.claimResponse" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ClaimResponse" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
