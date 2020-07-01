@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ClinicalImpression" />
   <url value="http://hl7india.org/fhir/StructureDefinition/ClinicalImpression" />
   <name value="ClinicalImpression" />
   <status value="draft" />
@@ -717,8 +718,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -980,7 +981,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ClinicalImpression" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1309,14 +1310,14 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/FamilyMemberHistory" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />		
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/FamilyMemberHistory" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1657,9 +1658,9 @@
       </base>
       <type>
         <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1926,6 +1927,11 @@
   <differential>
     <element id="ClinicalImpression.subject">
       <path value="ClinicalImpression.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />
@@ -1935,6 +1941,10 @@
     </element>
     <element id="ClinicalImpression.encounter">
       <path value="ClinicalImpression.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Encounter" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />
@@ -1944,6 +1954,11 @@
     </element>
     <element id="ClinicalImpression.assessor">
       <path value="ClinicalImpression.assessor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />
@@ -1962,6 +1977,11 @@
     </element>
     <element id="ClinicalImpression.problem">
       <path value="ClinicalImpression.problem" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/AllergyIntolerance" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />
@@ -1971,6 +1991,17 @@
     </element>
     <element id="ClinicalImpression.investigation.item">
       <path value="ClinicalImpression.investigation.item" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/FamilyMemberHistory" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />
@@ -1980,6 +2011,12 @@
     </element>
     <element id="ClinicalImpression.finding.itemReference">
       <path value="ClinicalImpression.finding.itemReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />

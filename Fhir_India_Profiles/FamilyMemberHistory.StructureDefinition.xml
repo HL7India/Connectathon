@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="FamilyMemberHistory" />
   <url value="http://hl7india.org/fhir/StructureDefinition/MyFamilyMemberHistory" />
   <name value="FamilyMemberHistory" />
   <status value="draft" />
@@ -717,7 +718,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1060,7 +1061,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present" />
         <expression value="code.empty() or system.exists()" />
         <xpath value="not(exists(f:code)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Quantity" />
       </constraint>
       <constraint>
         <key value="age-1" />
@@ -1269,12 +1270,13 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Condition" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/AllergyIntolerance" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1730,7 +1732,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present" />
         <expression value="code.empty() or system.exists()" />
         <xpath value="not(exists(f:code)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Quantity" />
       </constraint>
       <constraint>
         <key value="age-1" />
@@ -1823,6 +1825,10 @@
   <differential>
     <element id="FamilyMemberHistory.patient">
       <path value="FamilyMemberHistory.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />
@@ -1841,6 +1847,16 @@
     </element>
     <element id="FamilyMemberHistory.reasonReference">
       <path value="FamilyMemberHistory.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/AllergyIntolerance" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />
