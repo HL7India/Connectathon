@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://hl7India.org/fhir/StructureDefinition/Location" />
+  <id value="Location" />
+  <url value="http://hl7india.org/fhir/StructureDefinition/Location" />
   <name value="Location" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -1314,7 +1315,7 @@
           <valueBoolean value="true" />
         </extension>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Location" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1736,15 +1737,6 @@
     </element>
   </snapshot>
   <differential>
-    <element id="Location.telecom">
-      <path value="Location.telecom" />
-      <constraint>
-        <key value="cpt-2" />
-        <severity value="error" />
-        <human value="A system is required if a value is provided." />
-        <source value="http://hl7.org/fhir/StructureDefinition/Location" />
-      </constraint>
-    </element>
     <element id="Location.managingOrganization">
       <path value="Location.managingOrganization" />
       <type>
@@ -1760,6 +1752,13 @@
     </element>
     <element id="Location.partOf">
       <path value="Location.partOf" />
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
+          <valueBoolean value="true" />
+        </extension>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Location" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />

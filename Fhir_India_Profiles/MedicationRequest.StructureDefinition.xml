@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="MedicationRequest" />
   <url value="http://hl7india.org/fhir/StructureDefinition/MedicationRequest" />
   <name value="MedicationRequest" />
+  <title value="MedicationRequest" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -2844,7 +2846,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3195,7 +3197,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/MedicationRequest" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3503,65 +3505,12 @@
         <source value="http://hl7india.org/fhir/StructureDefinition/Medication" />
       </constraint>
     </element>
-    <element id="MedicationRequest.dispenseRequest.initialFill.quantity">
-      <path value="MedicationRequest.dispenseRequest.initialFill.quantity" />
-      <constraint>
-        <key value="qty-3" />
-        <severity value="error" />
-        <human value="If a code for the unit is present, the system SHALL also be present" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Ratio" />
-      </constraint>
-      <constraint>
-        <key value="sqty-1" />
-        <severity value="error" />
-        <human value="The comparator is not used on a SimpleQuantity" />
-        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
-      </constraint>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.initialFill.duration">
-      <path value="MedicationRequest.dispenseRequest.initialFill.duration" />
-      <constraint>
-        <key value="qty-3" />
-        <severity value="error" />
-        <human value="If a code for the unit is present, the system SHALL also be present" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Ratio" />
-      </constraint>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.dispenseInterval">
-      <path value="MedicationRequest.dispenseRequest.dispenseInterval" />
-      <constraint>
-        <key value="qty-3" />
-        <severity value="error" />
-        <human value="If a code for the unit is present, the system SHALL also be present" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Ratio" />
-      </constraint>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.quantity">
-      <path value="MedicationRequest.dispenseRequest.quantity" />
-      <constraint>
-        <key value="qty-3" />
-        <severity value="error" />
-        <human value="If a code for the unit is present, the system SHALL also be present" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Ratio" />
-      </constraint>
-      <constraint>
-        <key value="sqty-1" />
-        <severity value="error" />
-        <human value="The comparator is not used on a SimpleQuantity" />
-        <source value="http://hl7.org/fhir/StructureDefinition/MedicationRequest" />
-      </constraint>
-    </element>
-    <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">
-      <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration" />
-      <constraint>
-        <key value="qty-3" />
-        <severity value="error" />
-        <human value="If a code for the unit is present, the system SHALL also be present" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Ratio" />
-      </constraint>
-    </element>
     <element id="MedicationRequest.dispenseRequest.performer">
       <path value="MedicationRequest.dispenseRequest.performer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />
@@ -3571,6 +3520,10 @@
     </element>
     <element id="MedicationRequest.priorPrescription">
       <path value="MedicationRequest.priorPrescription" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/MedicationRequest" />
+      </type>
       <constraint>
         <key value="ref-1" />
         <severity value="error" />

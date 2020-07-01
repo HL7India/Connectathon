@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Medication" />
   <url value="http://hl7india.org/fhir/StructureDefinition/Medication" />
   <name value="Medication" />
+  <title value="Medication" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -826,7 +828,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Location" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1175,7 +1177,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Medication/Medication" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1577,6 +1579,24 @@
         <description value="SNOMED CT" />
         <valueSet value="http://hl7.org/fhir/ValueSet/medication-codes" />
       </binding>
+    </element>
+    <element id="Medication.manufacturer">
+      <path value="Medication.manufacturer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Medication.ingredient.item[x]">
+      <path value="Medication.ingredient.item[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Medication/Medication" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
