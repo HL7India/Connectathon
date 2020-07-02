@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Observation" />
   <url value="http://hl7india.org/fhir/StructureDefinition/Observation" />
   <name value="Observation" />
   <status value="draft" />
@@ -2377,9 +2378,9 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2440,8 +2441,8 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -3043,6 +3044,27 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+    </element>
+    <element id="Observation.hasMember">
+      <path value="Observation.hasMember" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+      </type>
+    </element>
+    <element id="Observation.derivedFrom">
+      <path value="Observation.derivedFrom" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MolecularSequence" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
       </type>
     </element>
   </differential>

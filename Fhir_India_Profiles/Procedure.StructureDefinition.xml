@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Procedure" />
   <url value="http://hl7india.org/fhir/StructureDefinition/Procedure" />
   <name value="Procedure" />
   <status value="draft" />
@@ -610,7 +611,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -651,9 +652,9 @@
       </base>
       <type>
         <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Procedure" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -670,7 +671,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -967,8 +968,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -985,7 +986,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7v.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1054,7 +1055,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1160,8 +1161,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
       </type>
@@ -1180,7 +1181,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1220,8 +1221,8 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
       </type>
@@ -1240,7 +1241,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1527,12 +1528,12 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1549,7 +1550,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1615,7 +1616,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1668,7 +1669,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1776,12 +1777,12 @@
       </base>
       <type>
         <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Procedure" />
         <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
-		<targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1798,7 +1799,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1966,10 +1967,10 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
-		<targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Composition" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1986,7 +1987,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -2098,7 +2099,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -2495,7 +2496,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -2532,8 +2533,8 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Medication" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Medication" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2550,7 +2551,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -2626,9 +2627,125 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Procedure.basedOn">
+      <path value="Procedure.basedOn" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/CarePlan" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ServiceRequest" />
+      </type>
+    </element>
+    <element id="Procedure.partOf">
+      <path value="Procedure.partOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationAdministration" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+      </type>
+    </element>
     <element id="Procedure.code">
       <path value="Procedure.code" />
       <min value="1" />
+    </element>
+    <element id="Procedure.subject">
+      <path value="Procedure.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="Procedure.encounter">
+      <path value="Procedure.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Encounter" />
+      </type>
+    </element>
+    <element id="Procedure.recorder">
+      <path value="Procedure.recorder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
+    </element>
+    <element id="Procedure.asserter">
+      <path value="Procedure.asserter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
+    </element>
+    <element id="Procedure.performer.actor">
+      <path value="Procedure.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Procedure.performer.onBehalfOf">
+      <path value="Procedure.performer.onBehalfOf" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
+    </element>
+    <element id="Procedure.location">
+      <path value="Procedure.location" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Location" />
+      </type>
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Procedure" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
+      </type>
+    </element>
+    <element id="Procedure.report">
+      <path value="Procedure.report" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Composition" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/LaboratoryDiagnosticReport" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/ImagingDiagnosticReport" />
+      </type>
+    </element>
+    <element id="Procedure.complicationDetail">
+      <path value="Procedure.complicationDetail" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Condition" />
+      </type>
+    </element>
+    <element id="Procedure.usedReference">
+      <path value="Procedure.usedReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Medication" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

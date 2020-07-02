@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Practitioner" />
   <url value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
   <name value="Practitioner" />
   <status value="draft" />
@@ -1038,7 +1039,7 @@
         <human value="A system is required if a value is provided." />
         <expression value="value.empty() or system.exists()" />
         <xpath value="not(exists(f:value)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Organization" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1264,7 +1265,7 @@
         <human value="If the Attachment has data, it SHALL have a contentType" />
         <expression value="data.empty() or contentType.exists()" />
         <xpath value="not(exists(f:data)) or exists(f:contentType)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1678,7 +1679,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/Observation" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Observation" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1780,6 +1781,13 @@
     <element id="Practitioner.qualification">
       <path value="Practitioner.qualification" />
       <min value="1" />
+    </element>
+    <element id="Practitioner.qualification.issuer">
+      <path value="Practitioner.qualification.issuer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Organization" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

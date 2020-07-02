@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="VitalSign" />
   <url value="http://hl7india.org/fhir/StructureDefinition/VitalSign" />
   <name value="VitalSign" />
   <status value="draft" />

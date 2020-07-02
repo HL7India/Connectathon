@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="NutritionOrder" />
   <url value="http://hl7india.org/fhir/StructureDefinition/NutritionOrder" />
   <name value="NutritionOrder" />
   <status value="draft" />
@@ -784,7 +785,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7india.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -853,7 +854,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -963,7 +964,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest" />
       </constraint>
       <isSummary value="true" />
       <mapping>
@@ -1028,7 +1029,7 @@
         <human value="SHALL have a contained resource if a local reference is provided" />
         <expression value="reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))" />
         <xpath value="not(starts-with(f:reference/@value, '#')) or exists(ancestor::*[self::f:entry or self::f:parameter]/f:resource/f:*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')]|/*/f:contained/f:*[f:id/@value=substring-after(current()/f:reference/@value, '#')])" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest" />
       </constraint>
       <mapping>
         <identity value="rim" />
@@ -1754,7 +1755,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present" />
         <expression value="code.empty() or system.exists()" />
         <xpath value="not(exists(f:code)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Quantity" />
       </constraint>
       <constraint>
         <key value="sqty-1" />
@@ -2584,7 +2585,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present" />
         <expression value="code.empty() or system.exists()" />
         <xpath value="not(exists(f:code)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Quantity" />
       </constraint>
       <constraint>
         <key value="sqty-1" />
@@ -3089,7 +3090,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present" />
         <expression value="code.empty() or system.exists()" />
         <xpath value="not(exists(f:code)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Quantity" />
       </constraint>
       <constraint>
         <key value="sqty-1" />
@@ -3454,7 +3455,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present" />
         <expression value="code.empty() or system.exists()" />
         <xpath value="not(exists(f:code)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Quantity" />
       </constraint>
       <constraint>
         <key value="sqty-1" />
@@ -3526,7 +3527,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present" />
         <expression value="code.empty() or system.exists()" />
         <xpath value="not(exists(f:code)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Quantity" />
       </constraint>
       <constraint>
         <key value="sqty-1" />
@@ -3595,7 +3596,7 @@
         <human value="If a code for the unit is present, the system SHALL also be present" />
         <expression value="code.empty() or system.exists()" />
         <xpath value="not(exists(f:code)) or exists(f:system)" />
-        <source value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+        <source value="http://hl7.org/fhir/StructureDefinition/Quantity" />
       </constraint>
       <constraint>
         <key value="sqty-1" />
@@ -3718,6 +3719,35 @@
     </element>
   </snapshot>
   <differential>
+    <element id="NutritionOrder.patient">
+      <path value="NutritionOrder.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Patient" />
+      </type>
+    </element>
+    <element id="NutritionOrder.encounter">
+      <path value="NutritionOrder.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Encounter" />
+      </type>
+    </element>
+    <element id="NutritionOrder.orderer">
+      <path value="NutritionOrder.orderer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/PractitionerRole" />
+      </type>
+    </element>
+    <element id="NutritionOrder.allergyIntolerance">
+      <path value="NutritionOrder.allergyIntolerance" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7india.org/fhir/StructureDefinition/AllergyIntolerance" />
+      </type>
+    </element>
     <element id="NutritionOrder.oralDiet.type">
       <path value="NutritionOrder.oralDiet.type" />
       <binding>
