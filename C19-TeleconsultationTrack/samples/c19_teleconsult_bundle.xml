@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<Bundle
+	xmlns="http://hl7.org/fhir">
+	<type value="transaction"></type>
+	<entry>
+		<fullUrl value="Patient/TT9812"></fullUrl>
+		<resource>
+			<Patient>
+				<identifier>
+					<use value="usual"></use>
+					<type>
+						<coding>
+							<system value="http://terminology.hl7.org/CodeSystem/v2-0203"></system>
+							<code value="SS"></code>
+							<display value="Aadhar Number"></display>
+						</coding>
+					</type>
+					<system value="https://www.lumc.nl/identifiers/PatientIdentifier"></system>
+					<value value="TT9812"></value>
+				</identifier>
+				<name>
+					<use value="usual"></use>
+					<text value="Raghu Ram Kumar" />
+					<family value="Kumar" />
+					<given value = "Raghu" />
+				</name>
+				<telecom>
+					<value value="tel:(91)923-9293-938"></value>
+				</telecom>
+				<gender value="male"></gender>
+				<birthDate value="1954-11-25"></birthDate>
+				<address>
+					<line value="#145, 3rd Cross, Halli"></line>
+					<city value="Nagawara"></city>
+					<state value="Karnataka"></state>
+					<postalCode value="560045"></postalCode>
+					<country value="IN"></country>
+				</address>
+			</Patient>
+		</resource>
+		<request>
+			<method value="POST"></method>
+			<url value="Patient?identifier=https://www.lumc.nl/identifiers/PatientIdentifier|TT9812"></url>
+		</request>
+	</entry>
+	<entry>
+		<fullUrl value="Condition/TT9812-1"></fullUrl>
+		<resource>
+			<Condition>
+				<identifier>
+					<use value="official"></use>
+					<value value="CondTT9812-1"></value>
+				</identifier>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"></system>
+						<code value="active"></code>
+						<display value="Active"></display>
+					</coding>
+				</clinicalStatus>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="49727002"></code>
+						<display value="Cough"></display>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/TT9812"></reference>
+					<display value=""></display>
+				</subject>
+				<encounter>
+					<reference value="Encounter/TT9812"></reference>
+				</encounter>
+				<onsetString value="4days"></onsetString>
+			</Condition>
+		</resource>
+		<request>
+			<method value="POST"></method>
+			<url value="Condition"></url>
+		</request>
+	</entry>
+	<entry>
+		<fullUrl value="Condition/TT9812-2"></fullUrl>
+		<resource>
+			<Condition>
+				<identifier>
+					<use value="official"></use>
+					<value value="CondTT9812-2"></value>
+				</identifier>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"></system>
+						<code value="active"></code>
+						<display value="Active"></display>
+					</coding>
+				</clinicalStatus>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="386661006"></code>
+						<display value="Fever"></display>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/TT9812"></reference>
+					<display value=""></display>
+				</subject>
+				<encounter>
+					<reference value="Encounter/TT9812"></reference>
+				</encounter>
+				<onsetString value="4days"></onsetString>
+			</Condition>
+		</resource>
+		<request>
+			<method value="POST"></method>
+			<url value="Condition"></url>
+		</request>
+	</entry>
+	<entry>
+		<fullUrl value="Condition/TT9812-3"></fullUrl>
+		<resource>
+			<Condition>
+				<identifier>
+					<use value="official"></use>
+					<value value="CondTT9812-3"></value>
+				</identifier>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"></system>
+						<code value="active"></code>
+						<display value="Active"></display>
+					</coding>
+				</clinicalStatus>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="68962001"></code>
+						<display value="Muscle-Pain"></display>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/TT9812"></reference>
+					<display value=""></display>
+				</subject>
+				<encounter>
+					<reference value="Encounter/TT9812"></reference>
+				</encounter>
+				<onsetString value="4days"></onsetString>
+			</Condition>
+		</resource>
+		<request>
+			<method value="POST"></method>
+			<url value="Condition"></url>
+		</request>
+	</entry>
+	<entry>
+		<fullUrl value="Encounter/TT9812"></fullUrl>
+		<resource>
+			<Encounter>
+				<identifier>
+					<use value="official"></use>
+					<value value="EncTT9812"></value>
+				</identifier>
+				<status value="arrived"></status>
+				<class>
+					<code value="VR"></code>
+				</class>
+				<subject>
+					<reference value="Patient/TT9812"></reference>
+					<display value=""></display>
+				</subject>
+				<period>
+					<start value="2020-06-27"></start>
+				</period>
+				<reasonCode>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="840533007"></code>
+						<display value="Severe acute respiratory syndrome coronavirus 2 (organism)"></display>
+					</coding>
+				</reasonCode>
+			</Encounter>
+		</resource>
+		<request>
+			<method value="POST"></method>
+			<url value="Encounter"></url>
+		</request>
+	</entry>
+	<entry>
+		<fullUrl value="Task/TT9812"></fullUrl>
+		<resource>
+			<Task>
+			  <identifier>  
+				<use value="usual"/>  
+				<value value="TaskTT9812"/>  
+			  </identifier>  
+			  <status value="requested"/>  
+			  <intent value="order"/>  
+			  <priority value="urgent"/>  
+			  <code>  
+				<coding> 
+				  <system value="http://hl7.org/fhir/CodeSystem/task-code"/> 
+				  <code value="approve"/> 
+				</coding> 
+			  </code>  
+			  <authoredOn value="2020-06-27T08:25:05+10:00"/>  
+			  <lastModified value="2020-06-27T08:25:05+10:00"/>  
+			  <requester>  
+				<reference value="Patient/TT9812"/>  
+			  </requester>  
+			  <owner>  
+				<reference value="Patient/TT9812"/>   
+			  </owner> 
+				<focus>
+					<reference value="Patient/TT9812"/>  			  
+				</focus>
+			</Task> 
+		</resource>
+		<request>
+			<method value="POST"></method>
+			<url value="Task"></url>
+		</request>
+	</entry>
+</Bundle>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Bundle
+	xmlns="http://hl7.org/fhir">
+	<type value="transaction"></type>
+	<entry>
+		<fullUrl value="Patient/TT9812"></fullUrl>
+		<resource>
+			<Patient>
+				<identifier>
+					<use value="usual"></use>
+					<type>
+						<coding>
+							<system value="http://terminology.hl7.org/CodeSystem/v2-0203"></system>
+							<code value="SS"></code>
+							<display value="Aadhar Number"></display>
+						</coding>
+					</type>
+					<system value="https://www.lumc.nl/identifiers/PatientIdentifier"></system>
+					<value value="TT9812"></value>
+				</identifier>
+				<name>
+					<use value="usual"></use>
+					<text value="Raghu Ram Kumara" />
+					<family value="Kumara" />
+					<given value = "Raghu" />
+				</name>
+				<telecom>
+					<value value="tel:(91)923-9293-938"></value>
+				</telecom>
+				<gender value="male"></gender>
+				<birthDate value="1954-11-25"></birthDate>
+				<address>
+					<line value="#145, 3rd Cross, Halli"></line>
+					<city value="Nagawara"></city>
+					<state value="Karnataka"></state>
+					<postalCode value="560045"></postalCode>
+					<country value="IN"></country>
+				</address>
+			</Patient>
+		</resource>
+		<request>
+			<method value="PUT"></method>
+			<url value="Patient?identifier=https://www.lumc.nl/identifiers/PatientIdentifier|TT9812"></url>
+		</request>
+	</entry>
+	<entry>
+		<fullUrl value="Condition/TT9812-1"></fullUrl>
+		<resource>
+			<Condition>
+				<identifier>
+					<use value="official"></use>
+					<value value="CondTT9812-1"></value>
+				</identifier>
+				<clinicalStatus>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/condition-clinical"></system>
+						<code value="active"></code>
+						<display value="Active"></display>
+					</coding>
+				</clinicalStatus>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"></system>
+						<code value="49727002"></code>
+						<display value="Coughing"></display>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/TT9812"></reference>
+					<display value=""></display>
+				</subject>
+				<encounter>
+					<reference value="Encounter/TT9812"></reference>
+				</encounter>
+				<onsetString value="4days"></onsetString>
+			</Condition>
+		</resource>
+		<request>
+			<method value="POST"></method>
+			<url value="Condition"></url>
+            <ifNoneExist value="identifier=CondTT9812-1"/>
+		</request>
+	</entry>
+</Bundle>
