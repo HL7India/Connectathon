@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "0cb2f70c-b71b-41a6-82f4-774284f4058e",
+		"name": "NCII TeleConsult Track Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query",
+			"item": [
+				{
+					"name": "Patient query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Patient/639/$everything",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Patient",
+								"639",
+								"$everything"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Task query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Task?identifier=ConsultTele",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Task"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "ConsultTele"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Condition query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Condition?identifier=",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Condition"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Observation query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Observation?identifier=",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Observation"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Encounter query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Encounter?identifier=",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Encounter"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "QuestionnaireResponse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/QuestionnaireResponse?identifier=",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"QuestionnaireResponse"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "Create TSO Bundle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceType\": \"Bundle\",\r\n  \"type\": \"transaction\",\r\n  \"entry\": [\r\n    {\r\n      \"fullUrl\": \"Patient/TeleConsult1\",\r\n      \"resource\": {\r\n        \"resourceType\": \"Patient\",\r\n        \"id\": \"TeleConsult1\",\r\n        \"identifier\": [\r\n          {\r\n            \"system\": \"https://github.com/synthetichealth/synthea\",\r\n            \"value\": \"TeleConsult1\"\r\n          },\r\n          {\r\n            \"type\": {\r\n              \"coding\": [\r\n                {\r\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\r\n                  \"code\": \"SS\",\r\n                  \"display\": \"Aadhaar Number\"\r\n                }\r\n              ],\r\n              \"text\": \"Aadhaar Number\"\r\n            },\r\n            \"system\": \"http://hl7.org/fhir/sid/us-ssn\",\r\n            \"value\": \"999999999999\"\r\n          }\r\n        ],\r\n        \"name\": [\r\n          {\r\n            \"use\": \"official\",\r\n            \"family\": \"DemoPatient2\",\r\n            \"given\": [\r\n              \"DemoP2\"\r\n            ],\r\n            \"prefix\": [\r\n              \"Mrs.\"\r\n            ]\r\n          },\r\n          {\r\n            \"use\": \"maiden\",\r\n            \"family\": \"DemoPatient2\",\r\n            \"given\": [\r\n              \"DemoP2\"\r\n            ],\r\n            \"prefix\": [\r\n              \"Mrs.\"\r\n            ]\r\n          }\r\n        ],\r\n        \"telecom\": [\r\n          {\r\n            \"system\": \"phone\",\r\n            \"value\": \"9873562710\",\r\n            \"use\": \"mobile\"\r\n          }\r\n        ],\r\n        \"gender\": \"female\",\r\n        \"birthDate\": \"1966-09-11\",\r\n        \"address\": [\r\n          {\r\n            \"line\": [\r\n              \"123 Beach Road\"\r\n            ],\r\n            \"city\": \"Bangalore\",\r\n            \"state\": \"Karnataka\",\r\n            \"postalCode\": \"560001\",\r\n            \"country\": \"IND\"\r\n          }\r\n        ],\r\n        \"maritalStatus\": {\r\n          \"coding\": [\r\n            {\r\n              \"system\": \"http://terminology.hl7.org/CodeSystem/v3-MaritalStatus\",\r\n              \"code\": \"M\",\r\n              \"display\": \"Married\"\r\n            }\r\n          ]\r\n        },\r\n        \"communication\": [\r\n          {\r\n            \"language\": {\r\n              \"coding\": [\r\n                {\r\n                  \"system\": \"http://hl7.org/fhir/valueset-languages.html\",\r\n                  \"code\": \"en-US\",\r\n                  \"display\": \"English\"\r\n                }\r\n              ]\r\n            }\r\n          }\r\n        ]\r\n      },\r\n      \"request\": {\r\n        \"method\": \"POST\",\r\n        \"url\": \"Patient\"\r\n      }\r\n    },\r\n    {\r\n      \"fullUrl\": \"Encounter/TeleConsult1\",\r\n      \"resource\": {\r\n        \"resourceType\": \"Encounter\",\r\n        \"id\": \"TeleConsult1\",\r\n        \"identifier\": [\r\n          {\r\n            \"use\": \"official\",\r\n            \"value\": \"TeleConsult1-1\"\r\n          }\r\n        ],\r\n        \"status\": \"arrived\",\r\n        \"class\": {\r\n          \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActCode\",\r\n          \"code\": \"IMP\",\r\n          \"display\": \"inpatient encounter\"\r\n        },\r\n        \"subject\": {\r\n          \"reference\": \"Patient/TeleConsult1\",\r\n          \"display\": \"Demo Patient\"\r\n        },\r\n        \"period\": {\r\n          \"start\": \"2020-06-27\",\r\n          \"end\": \"2020-06-29\"\r\n        },\r\n        \"reasonCode\": {\r\n          \"coding\": {\r\n            \"system\": \"http://snomed.info/sct\",\r\n            \"code\": \"840533007\",\r\n            \"display\": \"Severe acute respiratory syndrome coronavirus 2 (organism)\"\r\n          }\r\n        }\r\n      },\r\n      \"request\": {\r\n        \"method\": \"POST\",\r\n        \"url\": \"Encounter\"\r\n      }\r\n    },\r\n    {\r\n      \"fullUrl\": \"Condition/TeleConsult1\",\r\n      \"resource\": {\r\n        \"resourceType\": \"Condition\",\r\n        \"id\": \"TeleConsult1\",\r\n        \"identifier\": [\r\n          {\r\n            \"use\": \"official\",\r\n            \"value\": \"TeleConsult1-1\"\r\n          }\r\n        ],\r\n        \"clinicalStatus\": {\r\n          \"coding\": [\r\n            {\r\n              \"system\": \"http://terminology.hl7.org/CodeSystem/condition-clinical\",\r\n              \"code\": \"resolved\"\r\n            }\r\n          ]\r\n        },\r\n        \"severity\": {\r\n          \"coding\": [\r\n            {\r\n              \"system\": \"http://snomed.info/sct\",\r\n              \"code\": \"24484000\",\r\n              \"display\": \"Severe\"\r\n            }\r\n          ]\r\n        },\r\n        \"verificationStatus\": {\r\n          \"coding\": [\r\n            {\r\n              \"system\": \"http://terminology.hl7.org/CodeSystem/condition-ver-status\",\r\n              \"code\": \"confirmed\"\r\n            }\r\n          ]\r\n        },\r\n        \"code\": {\r\n          \"coding\": [\r\n            {\r\n              \"system\": \"http://snomed.info/sct\",\r\n              \"code\": \"267102003\",\r\n              \"display\": \"Sore throat symptom (finding)\"\r\n            }\r\n          ],\r\n          \"text\": \"Sore throat symptom (finding)\"\r\n        },\r\n        \"subject\": {\r\n          \"reference\": \"Patient/TeleConsult1\"\r\n        },\r\n        \"encounter\": {\r\n          \"reference\": \"Encounter/TeleConsult1\"\r\n        },\r\n        \"onsetDateTime\": \"2020-02-19T05:32:27+05:30\",\r\n        \"abatementDateTime\": \"2020-03-07T06:52:27+05:30\",\r\n        \"recordedDate\": \"2020-02-19T05:32:27+05:30\"\r\n      },\r\n      \"request\": {\r\n        \"method\": \"POST\",\r\n        \"url\": \"Condition\"\r\n      }\r\n    },\r\n    {\r\n      \"fullUrl\": \"Observation/TeleConsult1\",\r\n      \"resource\": {\r\n        \"resourceType\": \"Observation\",\r\n        \"id\": \"TeleConsult1\",\r\n        \"identifier\": [\r\n          {\r\n            \"use\": \"official\",\r\n            \"value\": \"TeleConsult1-1\"\r\n          }\r\n        ],\r\n        \"status\": \"final\",\r\n        \"category\": [\r\n          {\r\n            \"coding\": [\r\n              {\r\n                \"system\": \"http://terminology.hl7.org/CodeSystem/observation-category\",\r\n                \"code\": \"vital-signs\",\r\n                \"display\": \"vital-signs\"\r\n              }\r\n            ]\r\n          }\r\n        ],\r\n        \"code\": {\r\n          \"coding\": [\r\n            {\r\n              \"system\": \"http://loinc.org\",\r\n              \"code\": \"8310-5\",\r\n              \"display\": \"Body temperature\"\r\n            },\r\n            {\r\n              \"system\": \"http://loinc.org\",\r\n              \"code\": \"8331-1\",\r\n              \"display\": \"Oral temperature\"\r\n            }\r\n          ],\r\n          \"text\": \"Body temperature\"\r\n        },\r\n        \"subject\": {\r\n          \"reference\": \"Patient/TeleConsult1\"\r\n        },\r\n        \"encounter\": {\r\n          \"reference\": \"Encounter/TeleConsult1\"\r\n        },\r\n        \"effectiveDateTime\": \"2020-02-19T05:32:27+05:30\",\r\n        \"issued\": \"2020-02-19T05:32:27.361+05:30\",\r\n        \"valueQuantity\": {\r\n          \"value\": 40.604,\r\n          \"unit\": \"Cel\",\r\n          \"system\": \"http://unitsofmeasure.org\",\r\n          \"code\": \"Cel\"\r\n        },\r\n        \"interpretation\": [\r\n          {\r\n            \"coding\": [\r\n              {\r\n                \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation\",\r\n                \"code\": \"N\",\r\n                \"display\": \"Normal\"\r\n              }\r\n            ]\r\n          }\r\n        ]\r\n      },\r\n      \"request\": {\r\n        \"method\": \"POST\",\r\n        \"url\": \"Observation\"\r\n      }\r\n    },\r\n    {\r\n      \"fullUrl\": \"QuestionnaireResponse/TeleConsult1\",\r\n      \"resource\": {\r\n        \"resourceType\": \"QuestionnaireResponse\",\r\n        \"id\": \"TeleConsult1\",\r\n        \"identifier\": [\r\n          {\r\n            \"use\": \"official\",\r\n            \"value\": \"TeleConsult1-1\"\r\n          }\r\n        ],\r\n        \"subject\": {\r\n          \"reference\": \"Patient/TeleConsult1\"\r\n        },\r\n        \"encounter\": {\r\n          \"reference\": \"Encounter/TeleConsult1\"\r\n        },\r\n        \"item\": [\r\n          {\r\n            \"linkId\": \"1\",\r\n            \"item\": [\r\n              {\r\n                \"linkId\": \"1.1\",\r\n                \"text\": \"Contact with covid-19 patient in the last 14 days?\",\r\n                \"answer\": [\r\n                  {\r\n                    \"valueCoding\": {\r\n                      \"code\": \"at0047\",\r\n                      \"display\": \"Present\"\r\n                    }\r\n                  }\r\n                ]\r\n              },\r\n              {\r\n                \"linkId\": \"1.2\",\r\n                \"text\": \"Travel to COVID-19 hotspot in the last 14 days?\",\r\n                \"answer\": [\r\n                  {\r\n                    \"valueCoding\": {\r\n                      \"code\": \"at0047\",\r\n                      \"display\": \"Present\"\r\n                    }\r\n                  }\r\n                ]\r\n              },\r\n              {\r\n                \"linkId\": \"1.3\",\r\n                \"text\": \"Living in COVID-19 hotspot?\",\r\n                \"answer\": [\r\n                  {\r\n                    \"valueCoding\": {\r\n                      \"code\": \"at0047\",\r\n                      \"display\": \"Present\"\r\n                    }\r\n                  }\r\n                ]\r\n              }\r\n            ]\r\n          }\r\n        ]\r\n      },\r\n      \"request\": {\r\n        \"method\": \"POST\",\r\n        \"url\": \"QuestionnaireResponse\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir"
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create QuestionnaireResponse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceType\": \"QuestionnaireResponse\",\r\n  \"id\": \"TeleConsultation1\",\r\n  \"identifier\": [\r\n    {\r\n      \"use\": \"official\",\r\n      \"value\": \"TeleConsultation1-2\"\r\n    }\r\n  ],\r\n  \"subject\": {\r\n    \"reference\": \"Patient/TeleConsultation1\"\r\n  },\r\n  \"encounter\": {\r\n    \"reference\": \"Encounter/TeleConsultation1\"\r\n  },\r\n  \"item\": [\r\n    {\r\n      \"linkId\": \"1\",\r\n      \"item\": [\r\n        {\r\n          \"linkId\": \"1.1\",\r\n          \"text\": \"Contact with covid-19 patient in the last 14 days?\",\r\n          \"answer\": [\r\n            {\r\n              \"valueCoding\": {\r\n                \"code\": \"at0047\",\r\n                \"display\": \"Present\"\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"linkId\": \"1.2\",\r\n          \"text\": \"Travel to COVID-19 hotspot in the last 14 days?\",\r\n          \"answer\": [\r\n            {\r\n              \"valueCoding\": {\r\n                \"code\": \"at0047\",\r\n                \"display\": \"Present\"\r\n              }\r\n            }\r\n          ]\r\n        },\r\n        {\r\n          \"linkId\": \"1.3\",\r\n          \"text\": \"Living in COVID-19 hotspot?\",\r\n          \"answer\": [\r\n            {\r\n              \"valueCoding\": {\r\n                \"code\": \"at0047\",\r\n                \"display\": \"Present\"\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/QuestionnaireResponse",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"QuestionnaireResponse"
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceType\": \"Task\",\r\n  \"id\": \"ConsultTele2\",\r\n  \"identifier\": [\r\n    {\r\n      \"system\": \"https://github.com/synthetichealth/synthea\",\r\n      \"value\": \"ConsultTele2\"\r\n    }\r\n  ],\r\n  \"status\": \"requested\",\r\n  \"intent\": \"order\",\r\n  \"priority\": \"stat\",\r\n  \"for\": {\r\n    \"reference\": \"Patient/ConsultTele2\"\r\n  },\r\n  \"encounter\": {\r\n    \"reference\": \"Encounter/ConsultTele2\"\r\n  },\r\n  \"requester\": {\r\n    \"reference\": \"Patient/ConsultTele2\"\r\n  },\r\n  \"focus\": {\r\n    \"reference\": \"ServiceRequest/lipid\",\r\n    \"display\": \"Lipid Panel Request\"\r\n  },\r\n  \"authoredOn\": \"2020-07-02T13:03:13.963+00:00\",\r\n  \"reasonCode\": {\r\n    \"text\": \"The Task.reason should only be included if there is no Task.focus or if it differs from the reason indicated on the focus.\"\r\n  },\r\n  \"note\": [\r\n    {\r\n      \"text\": \"This is an example to demonstrate using task for actioning a servicerequest . \"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Task",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Task"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "TeleTask20",
+									"disabled": true
+								}
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Observation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\r\n        \"resourceType\": \"Observation\",\r\n\r\n        \"id\": \"ConsultTele3\",\r\n        \"identifier\": [\r\n\r\n            {\r\n                \"use\":\"official\",\r\n                \"value\" :\"ConsultTele3-1\"\r\n            }\r\n  \r\n          ],\r\n\r\n        \"status\": \"final\",\r\n\r\n        \"category\": [\r\n\r\n          {\r\n\r\n            \"coding\": [\r\n\r\n              {\r\n\r\n                \"system\": \"http://terminology.hl7.org/CodeSystem/observation-category\",\r\n\r\n                \"code\": \"vital-signs\",\r\n\r\n                \"display\": \"vital-signs\"\r\n\r\n              }\r\n\r\n            ]\r\n\r\n          }\r\n\r\n        ],\r\n\r\n        \"code\": {\r\n\r\n          \"coding\": [\r\n\r\n            {\r\n\r\n              \"system\": \"http://loinc.org\",\r\n\r\n              \"code\": \"8310-5\",\r\n\r\n              \"display\": \"Body temperature\"\r\n\r\n            },\r\n\r\n            {\r\n\r\n              \"system\": \"http://loinc.org\",\r\n\r\n              \"code\": \"8331-1\",\r\n\r\n              \"display\": \"Oral temperature\"\r\n\r\n            }\r\n\r\n          ],\r\n\r\n          \"text\": \"Body temperature\"\r\n\r\n        },\r\n\r\n        \"subject\": {\r\n\r\n          \"reference\": \"Patient/ConsultTele3\"\r\n\r\n        },\r\n\r\n\t\"encounter\": {\r\n\r\n          \"reference\": \"Encounter/ConsultTele3\"\r\n\r\n        },\r\n\r\n        \"effectiveDateTime\": \"2020-02-19T05:32:27+05:30\",\r\n\r\n        \"issued\": \"2020-02-19T05:32:27.361+05:30\",\r\n\r\n        \"valueQuantity\": {\r\n\r\n          \"value\": 40.604,\r\n\r\n          \"unit\": \"Cel\",\r\n\r\n          \"system\": \"http://unitsofmeasure.org\",\r\n\r\n          \"code\": \"Cel\"\r\n\r\n        },\r\n\r\n\t\"interpretation\": [\r\n\r\n          {\r\n\r\n            \"coding\": [\r\n\r\n              {\r\n\r\n                \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation\",\r\n\r\n                \"code\": \"N\",\r\n\r\n                \"display\": \"Normal\"\r\n\r\n              }\r\n\r\n            ]\r\n\r\n          }\r\n\r\n        ]\r\n\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Observation",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Observation"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "TeleTask20",
+									"disabled": true
+								}
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Organization",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceType\": \"Organization\",\r\n  \"identifier\": [\r\n\t{\t\r\n\t\t\t\"use\":\"official\",\r\n\t\t\t\"value\":\"TPO_Org_test-1\"\r\n\r\n\t}\r\n  ],\r\n  \"active\":true,\r\n  \"name\": \"Tele-Provide Organization Test One\",\r\n   \"type\": [\r\n    {\r\n      \"coding\": [\r\n        {\r\n          \"system\": \"http://terminology.hl7.org/CodeSystem/organization-type\",\r\n          \"code\": \"prov\",\r\n          \"display\": \"Healthcare Provider\"\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"telecom\": [\r\n    {\r\n      \"system\": \"phone\",\r\n      \"value\": \"080-46848600\",\r\n      \"use\": \"work\"\r\n    },\r\n    {\r\n      \"system\": \"email\",\r\n      \"value\": \"tpoonetest@listoftops.org\",\r\n      \"use\": \"work\"\r\n    }\r\n  ],\r\n  \"address\": [\r\n    {\r\n\t  \"line\":\"SHRI SAI HOSPITAL\",\r\n      \"city\":\"Bengaluru\",\r\n\t  \"state\":\"Karantaka\",\r\n\t  \"country\": \"India\"\r\n\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Organization",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Organization"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Patch",
+			"item": [
+				{
+					"name": "Patch for Patient",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n[ { \r\n   \"op\": \"replace\", \r\n   \"path\": \"/birthDate\", \r\n   \"value\": \"1974-02-13\" \r\n }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Patient/456",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Patient",
+								"456"
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Patch for Task",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[ \r\n  { \r\n   \"op\": \"test\", \r\n   \"path\": \"/owner\", \r\n   \"value\": {\"reference\": \"Patient/ConsultTele2\",\"display\":\"Org1\"}\r\n },\r\n  { \r\n   \"op\": \"replace\", \r\n   \"path\": \"/status\", \r\n   \"value\": \"accepted\" \r\n }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Task/665",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Task",
+								"665"
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Update",
+			"item": [
+				{
+					"name": "update bundle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"type": "text",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"resourceType\": \"Bundle\",\r\n \r\n  \"id\": \"70509340-8a74-4b41-af09-854bcc2c2b46\",\r\n\r\n  \"entry\": [\r\n\r\n    {\r\n\r\n      \"fullUrl\": \"Patient/TeleConsult1\",\r\n\r\n      \"resource\": {\r\n\r\n        \"resourceType\": \"Patient\",\r\n\r\n        \"id\": \"TeleConsult1\",\r\n\r\n        \"identifier\": [\r\n\r\n          {\r\n\r\n            \"system\": \"https://github.com/synthetichealth/synthea\",\r\n\r\n            \"value\": \"TeleConsult1\"\r\n\r\n          },\r\n\r\n          {\r\n\r\n            \"type\": {\r\n\r\n              \"coding\": [\r\n\r\n                {\r\n\r\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\r\n\r\n                  \"code\": \"SS\",\r\n\r\n                  \"display\": \"Aadhaar Number\"\r\n\r\n                }\r\n\r\n              ],\r\n\r\n              \"text\": \"Aadhaar Number\"\r\n\r\n            },\r\n\r\n            \"system\": \"http://hl7.org/fhir/sid/us-ssn\",\r\n\r\n            \"value\": \"999999999999\"\r\n\r\n          }\r\n\r\n        ],\r\n\r\n        \"name\": [\r\n\r\n          {\r\n\r\n            \"use\": \"official\",\r\n\r\n            \"family\": \"DemoPatient2\",\r\n\r\n            \"given\": [\r\n\r\n              \"DemoP2\"\r\n\r\n            ],\r\n\r\n            \"prefix\": [\r\n\r\n              \"Mrs.\"\r\n\r\n            ]\r\n\r\n          },\r\n\r\n          {\r\n\r\n            \"use\": \"maiden\",\r\n\r\n            \"family\": \"DemoPatient2\",\r\n\r\n            \"given\": [\r\n\r\n              \"DemoP2\"\r\n\r\n            ],\r\n\r\n            \"prefix\": [\r\n\r\n              \"Mrs.\"\r\n\r\n            ]\r\n\r\n          }\r\n\r\n        ],\r\n\r\n\r\n\r\n        \"telecom\": [\r\n\r\n          {\r\n\r\n            \"system\": \"phone\",\r\n\r\n            \"value\": \"9873562710\",\r\n\r\n            \"use\": \"mobile\"\r\n\r\n          }\r\n\r\n        ],\r\n\r\n        \"gender\": \"female\",\r\n\r\n        \"birthDate\": \"1966-09-11\",\r\n\r\n        \"address\": [\r\n\r\n          {\r\n\r\n              \"line\": [\r\n\r\n              \"123 Beach Road\"\r\n\r\n            ],\r\n\r\n            \"city\": \"Bangalore\",\r\n\r\n            \"state\": \"Karnataka\",\r\n\r\n            \"postalCode\": \"560001\",\r\n\r\n            \"country\": \"IND\"\r\n\r\n          }\r\n\r\n        ],\r\n\r\n        \"maritalStatus\": {\r\n\r\n          \"coding\": [\r\n\r\n            {\r\n\r\n              \"system\": \"http://terminology.hl7.org/CodeSystem/v3-MaritalStatus\",\r\n\r\n              \"code\": \"M\",\r\n\r\n              \"display\": \"Married\"\r\n\r\n            }\r\n\r\n          ]\r\n\r\n        },\r\n\r\n        \"communication\": [\r\n\r\n          {\r\n\r\n            \"language\": {\r\n\r\n              \"coding\": [\r\n\r\n                {\r\n\r\n                  \"system\": \"http://hl7.org/fhir/valueset-languages.html\",\r\n\r\n                  \"code\": \"en-US\",\r\n\r\n                  \"display\": \"English\"\r\n\r\n                }\r\n\r\n              ]\r\n\r\n            }\r\n\r\n          }\r\n\r\n        ]\r\n\r\n      },\r\n\r\n      \"request\": {\r\n\r\n        \"method\": \"PUT\",\r\n\r\n        \"url\": \"Patient?identifier=TeleConsult1\"\r\n\r\n      }\r\n\r\n    }\r\n\r\n  ]\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://123.108.43.251:8080/hapi-fhir-jpaserver/fhir/",
+							"protocol": "http",
+							"host": [
+								"123",
+								"108",
+								"43",
+								"251"
+							],
+							"port": "8080",
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								""
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Patient update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\r\n    \r\n\r\n        \"resourceType\": \"Patient\",\r\n\r\n        \"id\": \"TTCDSP9832\",\r\n\r\n        \"identifier\": [\r\n\r\n          {\r\n\r\n            \"system\": \"https://github.com/synthetichealth/synthea\",\r\n\r\n            \"value\": \"TTCDSP9832\"\r\n\r\n          },\r\n\r\n          {\r\n\r\n            \"type\": {\r\n\r\n              \"coding\": [\r\n\r\n                {\r\n\r\n                  \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\",\r\n\r\n                  \"code\": \"SS\",\r\n\r\n                  \"display\": \"Aadhaar Number\"\r\n\r\n                }\r\n\r\n              ],\r\n\r\n              \"text\": \"Aadhaar Number\"\r\n\r\n            },\r\n\r\n            \"system\": \"http://hl7.org/fhir/sid/us-ssn\",\r\n\r\n            \"value\": \"8888888\"\r\n\r\n          }\r\n\r\n        ],\r\n\r\n        \"name\": [\r\n\r\n          {\r\n\r\n            \"use\": \"official\",\r\n\r\n            \"family\": \"DemoPatient2\",\r\n\r\n            \"given\": [\r\n\r\n              \"DemoP2\"\r\n\r\n            ],\r\n\r\n            \"prefix\": [\r\n\r\n              \"Mrs.\"\r\n\r\n            ]\r\n\r\n          },\r\n\r\n          {\r\n\r\n            \"use\": \"maiden\",\r\n\r\n            \"family\": \"DemoPatient2\",\r\n\r\n            \"given\": [\r\n\r\n              \"DemoP2\"\r\n\r\n            ],\r\n\r\n            \"prefix\": [\r\n\r\n              \"Mrs.\"\r\n\r\n            ]\r\n\r\n          }\r\n\r\n        ],\r\n\r\n\r\n\r\n        \"telecom\": [\r\n\r\n          {\r\n\r\n            \"system\": \"phone\",\r\n\r\n            \"value\": \"9873562710\",\r\n\r\n            \"use\": \"mobile\"\r\n\r\n          }\r\n\r\n        ],\r\n\r\n        \"gender\": \"female\",\r\n\r\n        \"birthDate\": \"1966-09-11\",\r\n\r\n        \"address\": [\r\n\r\n          {\r\n\r\n              \"line\": [\r\n\r\n              \"123 Beach Road\"\r\n\r\n            ],\r\n\r\n            \"city\": \"Bangalore\",\r\n\r\n            \"state\": \"Karnataka\",\r\n\r\n            \"postalCode\": \"560001\",\r\n\r\n            \"country\": \"IND\"\r\n\r\n          }\r\n\r\n        ],\r\n\r\n        \"maritalStatus\": {\r\n\r\n          \"coding\": [\r\n\r\n            {\r\n\r\n              \"system\": \"http://terminology.hl7.org/CodeSystem/v3-MaritalStatus\",\r\n\r\n              \"code\": \"M\",\r\n\r\n              \"display\": \"Married\"\r\n\r\n            }\r\n\r\n          ]\r\n\r\n        },\r\n\r\n        \"communication\": [\r\n\r\n          {\r\n\r\n            \"language\": {\r\n\r\n              \"coding\": [\r\n\r\n                {\r\n\r\n                  \"system\": \"http://hl7.org/fhir/valueset-languages.html\",\r\n\r\n                  \"code\": \"en-US\",\r\n\r\n                  \"display\": \"English\"\r\n\r\n                }\r\n\r\n              ]\r\n\r\n            }\r\n\r\n          }\r\n\r\n        ]\r\n\r\n\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://123.108.43.251:8080/hapi-fhir-jpaserver/fhir/Patient?identifier=",
+							"protocol": "http",
+							"host": [
+								"123",
+								"108",
+								"43",
+								"251"
+							],
+							"port": "8080",
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Condtion update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"resourceType\": \"Condition\",\r\n\t\"id\": \"TTCDSP9833\",\r\n\t\"identifier\": [\r\n\t\t{\r\n\t\t\t\"use\": \"official\",\r\n\t\t\t\"value\": \"TTCDSP9833-1\"\r\n\t\t}\r\n\t],\r\n\r\n\t\"verificationStatus\": {\r\n\t\t\"coding\": [\r\n\t\t\t{\r\n\t\t\t\t\"system\": \"http://terminology.hl7.org/CodeSystem/condition-ver-status\",\r\n\t\t\t\t\"code\": \"confirmed\"\r\n\t\t\t}\r\n\t\t]\r\n\t},\r\n\t\"code\": {\r\n\t\t\"coding\": [\r\n\t\t\t{\r\n\t\t\t\t\"system\": \"http://snomed.info/sct\",\r\n\t\t\t\t\"code\": \"267102003\",\r\n\t\t\t\t\"display\": \"Sore throat symptom (finding)\"\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"text\": \"Sore throat symptom (finding)\"\r\n\t},\r\n\t\"subject\": {\r\n\t\t\"reference\": \"Patient/TTCDSP9833\"\r\n\t},\r\n\t\"onsetDateTime\": \"2020-02-19T05:32:27+05:30\",\r\n\t\"abatementDateTime\": \"2020-03-07T06:52:27+05:30\",\r\n\t\"recordedDate\": \"2020-02-19T05:32:27+05:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://123.108.43.251:8080/hapi-fhir-jpaserver/fhir/Condition?identifier=",
+							"protocol": "http",
+							"host": [
+								"123",
+								"108",
+								"43",
+								"251"
+							],
+							"port": "8080",
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Condition"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Observation update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"resourceType\": \"Observation\",\r\n\r\n        \"id\": \"TTCDSP9833\",\r\n        \"identifier\": [\r\n\r\n            {\r\n                \"use\":\"official\",\r\n                \"value\" :\"TTCDSP9833-1\"\r\n            }\r\n  \r\n          ],\r\n\r\n        \"status\": \"preliminary\",\r\n\r\n        \"category\": [\r\n\r\n          {\r\n\r\n            \"coding\": [\r\n\r\n              {\r\n\r\n                \"system\": \"http://terminology.hl7.org/CodeSystem/observation-category\",\r\n\r\n                \"code\": \"vital-signs\",\r\n\r\n                \"display\": \"vital-signs\"\r\n\r\n              }\r\n\r\n            ]\r\n\r\n          }\r\n\r\n        ],\r\n\r\n        \"code\": {\r\n\r\n          \"coding\": [\r\n\r\n            {\r\n\r\n              \"system\": \"http://loinc.org\",\r\n\r\n              \"code\": \"8310-5\",\r\n\r\n              \"display\": \"Body temperature\"\r\n\r\n            },\r\n\r\n            {\r\n\r\n              \"system\": \"http://loinc.org\",\r\n\r\n              \"code\": \"8331-1\",\r\n\r\n              \"display\": \"Oral temperature\"\r\n\r\n            }\r\n\r\n          ],\r\n\r\n          \"text\": \"Body temperature\"\r\n\r\n        },\r\n\r\n        \"subject\": {\r\n\r\n          \"reference\": \"Patient/TTCDSP9833\"\r\n\r\n        },\r\n\r\n\t\"encounter\": {\r\n\r\n          \"reference\": \"Encounter/TTCDSP9833\"\r\n\r\n        },\r\n\r\n        \"effectiveDateTime\": \"2020-02-19T05:32:27+05:30\",\r\n\r\n        \"issued\": \"2020-02-19T05:32:27.361+05:30\",\r\n\r\n        \"valueQuantity\": {\r\n\r\n          \"value\": 40.604,\r\n\r\n          \"unit\": \"Cel\",\r\n\r\n          \"system\": \"http://unitsofmeasure.org\",\r\n\r\n          \"code\": \"Cel\"\r\n\r\n        },\r\n\r\n\t\"interpretation\": [\r\n\r\n          {\r\n\r\n            \"coding\": [\r\n\r\n              {\r\n\r\n                \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation\",\r\n\r\n                \"code\": \"N\",\r\n\r\n                \"display\": \"Normal\"\r\n\r\n              }\r\n\r\n            ]\r\n\r\n          }\r\n\r\n        ]\r\n\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir/Observation?identifier=",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Observation"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Encounter update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n        \"resourceType\": \"Encounter\",\r\n\r\n        \"id\": \"TTCDSP9833\",\r\n\r\n        \"identifier\": [\r\n\r\n            {\r\n                \"use\":\"official\",\r\n                \"value\" :\"TTCDSP9833-1\"\r\n            }\r\n  \r\n          ],\r\n\r\n        \"status\": \"onleave\",\r\n\r\n        \"class\": {\r\n\r\n            \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActCode\",\r\n\r\n             \"code\": \"IMP\",\r\n\r\n             \"display\": \"inpatient encounter\"\r\n\r\n        },\r\n\r\n        \"subject\": {\r\n\r\n          \"reference\": \"Patient/TTCDSP9833\",\r\n\r\n          \"display\": \"Demo Patient\"\r\n\r\n          },\r\n\r\n        \"period\": {\r\n\r\n          \"start\": \"2020-06-27\",\r\n\r\n          \"end\" : \"2020-06-29\"\r\n\r\n        },\r\n\r\n        \"reasonCode\": {\r\n\r\n          \"coding\": {\r\n\r\n            \"system\": \"http://snomed.info/sct\",\r\n\r\n            \"code\":  \"840533007\",\r\n\r\n            \"display\": \"Severe acute respiratory syndrome coronavirus 2 (organism)\"\r\n\r\n          }\r\n\r\n        }\r\n\r\n      }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://123.108.43.251:8080/hapi-fhir-jpaserver/fhir/Encounter?identifier=",
+							"protocol": "http",
+							"host": [
+								"123",
+								"108",
+								"43",
+								"251"
+							],
+							"port": "8080",
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Encounter"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						},
+						"description": "final working bundle \r\n\r\npatient\r\ncondition-1\r\ncondition-2\r\ncondition-3\r\nencounter\r\ntask\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "QuestionnaireResponse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"resourceType\": \"QuestionnaireResponse\",\r\n        \"id\": \"TTCDSP9833\",\r\n        \"subject\": {\r\n            \"reference\": \"Patient/TTCDSP9833\"\r\n        },\r\n        \"identifier\": [\r\n\r\n            {\r\n                \"use\":\"official\",\r\n                \"value\" :\"TTCDSP9833-2\"\r\n            }\r\n  \r\n          ],\r\n        \"item\": [\r\n            {\r\n                \"linkId\": \"1\",\r\n                \"item\": [\r\n                    {\r\n                        \"linkId\": \"1.1\",\r\n                        \"text\": \"Contact with covid-19 patient in the last 14 days?\",\r\n                        \"answer\": [\r\n                            {\r\n                                \"valueCoding\": {\r\n                                    \"code\": \"at0047\",\r\n                                    \"display\": \"Present\"\r\n                                  }\r\n                            }\r\n                        ]\r\n                    },\r\n                    {\r\n                        \"linkId\": \"1.2\",\r\n                        \"text\": \"Travel to COVID-19 hotspot in the last 14 days?\",\r\n                        \"answer\": [\r\n                            {\r\n                                \"valueCoding\": {\r\n                                    \"code\": \"at0047\",\r\n                                    \"display\": \"Present\"\r\n                                  }\r\n                            }\r\n                        ]\r\n                    },\r\n                    {\r\n                        \"linkId\": \"1.3\",\r\n                        \"text\": \"Living in COVID-19 hotspot?\",\r\n                        \"answer\": [\r\n                            {\r\n                                \"valueCoding\": {\r\n                                    \"code\": \"at0047\",\r\n                                    \"display\": \"Present\"\r\n                                  }\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n\r\n         \r\n        ]\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://123.108.43.251:8080/hapi-fhir-jpaserver/fhir/QuestionnaireResponse?identifier=",
+							"protocol": "http",
+							"host": [
+								"123",
+								"108",
+								"43",
+								"251"
+							],
+							"port": "8080",
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"QuestionnaireResponse"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": ""
+								}
+							]
+						},
+						"description": "conditional update\r\n\r\npatient \r\ncondition"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
