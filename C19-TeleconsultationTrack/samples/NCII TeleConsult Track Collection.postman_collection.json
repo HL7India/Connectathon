@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0cb2f70c-b71b-41a6-82f4-774284f4058e",
+		"_postman_id": "2bb3c01e-3ced-4c0c-99cd-3e595acb5901",
 		"name": "NCII TeleConsult Track Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -307,6 +307,39 @@
 								"hapi-fhir-jpaserver",
 								"fhir",
 								"Organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Questionnaire",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceType\": \"Questionnaire\",\r\n  \"id\": \"COVID-19-virus-self-assessment-test\",\r\n  \"identifier\": [\r\n\t{\t\r\n\t\t\t\"use\":\"official\",\r\n\t\t\t\"value\":\"TSO_Questionnaire-1\"\r\n\r\n\t}\r\n  ],\r\n  \"name\": \"Covid19SelfAssessmentTest\",\r\n  \"title\": \"Covid-19 Self Assessment Test\",\r\n  \"status\": \"active\",\r\n  \"publisher\":\"TSO Organization One\",\r\n  \"item\": [\r\n    {\r\n      \"linkId\": \"1\",\r\n      \"code\": [\r\n        {\r\n          \"system\": \"http://example.org/questionnaires\",\r\n          \"code\": \"sat_symptoms\"\r\n        }\r\n      ],\r\n      \"text\": \"Are you experiencing any of the following symptoms?\",\r\n      \"type\": \"choice\",\r\n      \"answerOption\":[\r\n          {\r\n              \"valueString\":\"Cough\"\r\n          },\r\n          {\r\n              \"valueString\":\"Fever\"\r\n          },\r\n          {\r\n              \"valueString\":\"Difficulty in breathing\"\r\n          },\r\n          {\r\n              \"valueString\":\"None of the above\"\r\n          }\r\n      ]\r\n    },\r\n     {\r\n      \"linkId\": \"2\",\r\n      \"code\": [\r\n        {\r\n          \"system\": \"http://example.org/questionnaires\",\r\n          \"code\": \"sat_international_travel\"\r\n        }\r\n      ],\r\n      \"text\": \"Have you travelled anywhere internationally in the last14 days?\",\r\n      \"type\": \"boolean\"\r\n    },\r\n     {\r\n      \"linkId\": \"3\",\r\n      \"code\": [\r\n        {\r\n          \"system\": \"http://example.org/questionnaires\",\r\n          \"code\": \"sat_misc\"\r\n        }\r\n      ],\r\n      \"text\": \"Which of the following applies to you?\",\r\n      \"type\": \"choice\",\r\n      \"answerOption\":[\r\n          {\r\n              \"valueString\":\"I have recently interacted or lived with someone who has tested positive for COVID-19\"\r\n          },\r\n          {\r\n              \"valueString\":\"I am a healthcare worker and I examined a COVID-19 confirmed case without protective gear.\"\r\n          },\r\n          {\r\n              \"valueString\":\"None of the above\"\r\n          }\r\n      ]\r\n    },\r\n    {\r\n      \"linkId\": \"4\",\r\n      \"code\": [\r\n        {\r\n          \"system\": \"http://example.org/questionnaires\",\r\n          \"code\": \"sat_medical_history\"\r\n        }\r\n      ],\r\n      \"text\": \"Have you ever had any one of the following:\",\r\n      \"type\": \"choice\",\r\n      \"answerOption\":[\r\n          {\r\n              \"valueString\":\"Diabetes\"\r\n          },\r\n          {\r\n              \"valueString\":\"Hypertension\"\r\n          },\r\n          {\r\n              \"valueString\":\"Lung Disease\"\r\n          },\r\n          {\r\n              \"valueString\":\"Heart Disease\"\r\n          },\r\n          {\r\n              \"valueString\":\"None of the above\"\r\n          }\r\n      ]\r\n    }\r\n    \r\n  ]\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://123.108.43.251:8080/hapi-fhir-jpaserver/fhir/Questionnaire",
+							"protocol": "http",
+							"host": [
+								"123",
+								"108",
+								"43",
+								"251"
+							],
+							"port": "8080",
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir",
+								"Questionnaire"
 							]
 						}
 					},

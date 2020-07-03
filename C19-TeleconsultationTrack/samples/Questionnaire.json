@@ -1,0 +1,105 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "COVID-19-virus-self-assessment-test",
+  "identifier": [
+	{	
+			"use":"official",
+			"value":"TSO_Questionnaire-1"
+
+	}
+  ],
+  "name": "Covid19SelfAssessmentTest",
+  "title": "Covid-19 Self Assessment Test",
+  "status": "active",
+  "publisher":"TSO Organization One",
+  "item": [
+    {
+      "linkId": "1",
+      "code": [
+        {
+          "system": "http://example.org/questionnaires",
+          "code": "sat_symptoms"
+        }
+      ],
+      "text": "Are you experiencing any of the following symptoms?",
+      "type": "choice",
+      "answerOption":[
+          {
+              "valueString":"Cough"
+          },
+          {
+              "valueString":"Fever"
+          },
+          {
+              "valueString":"Difficulty in breathing"
+          },
+          {
+              "valueString":"None of the above"
+          }
+      ]
+    },
+     {
+      "linkId": "2",
+      "code": [
+        {
+          "system": "http://example.org/questionnaires",
+          "code": "sat_international_travel"
+        }
+      ],
+      "text": "Have you travelled anywhere internationally in the last14 days?",
+      "type": "boolean"
+    },
+     {
+      "linkId": "3",
+      "code": [
+        {
+          "system": "http://example.org/questionnaires",
+          "code": "sat_misc"
+        }
+      ],
+      "text": "Which of the following applies to you?",
+      "type": "choice",
+      "answerOption":[
+          {
+              "valueString":"I have recently interacted or lived with someone who has tested positive for COVID-19"
+          },
+          {
+              "valueString":"I am a healthcare worker and I examined a COVID-19 confirmed case without protective gear."
+          },
+          {
+              "valueString":"None of the above"
+          }
+      ]
+    },
+    {
+      "linkId": "4",
+      "code": [
+        {
+          "system": "http://example.org/questionnaires",
+          "code": "sat_medical_history"
+        }
+      ],
+      "text": "Have you ever had any one of the following:",
+      "type": "choice",
+      "answerOption":[
+          {
+              "valueString":"Diabetes"
+          },
+          {
+              "valueString":"Hypertension"
+          },
+          {
+              "valueString":"Lung Disease"
+          },
+          {
+              "valueString":"Heart Disease"
+          },
+          {
+              "valueString":"None of the above"
+          }
+      ]
+    }
+    
+  ]
+      
+}
