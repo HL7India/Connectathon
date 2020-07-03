@@ -1,0 +1,44 @@
+{
+  "resourceType": "Organization",
+  "identifier": [
+	{	
+			"use":"official",
+			"value":"TPO_Org_test-1"
+
+	}
+  ],
+  "active":true,
+  "name": "Tele-Provide Organization Test One",
+   "type": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "prov",
+          "display": "Healthcare Provider"
+        }
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "080-46848600",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "tpoonetest@listoftops.org",
+      "use": "work"
+    }
+  ],
+  "address": [
+    {
+	  "line":"SHRI SAI HOSPITAL",
+      "city":"Bengaluru",
+	  "state":"Karantaka",
+	  "country": "India"
+
+    }
+  ]
+}
