@@ -344,6 +344,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "TPO Patiet Summary",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resourceType\": \"Bundle\",\r\n    \"type\": \"transaction\",\r\n    \"entry\": [\r\n      {\r\n        \"fullUrl\": \"Encounter/Tele16-3-33\",\r\n        \"resource\": {\r\n          \"resourceType\": \"Encounter\",\r\n          \"id\": \"Tele16-3-33\",\r\n          \"identifier\": [\r\n            {\r\n              \"use\": \"official\",\r\n              \"value\": \"Tele16-3-33-1\"\r\n            }\r\n          ],\r\n          \"status\": \"arrived\",\r\n          \"class\": {\r\n            \"system\": \"http://terminology.hl7.org/CodeSystem/v3-ActCode\",\r\n            \"code\": \"IMP\",\r\n            \"display\": \"inpatient encounter\"\r\n          },\r\n          \"subject\": {\r\n            \"reference\": \"Patient/Tele16-3-33\",\r\n            \"display\": \"Demo Patient\"\r\n          },\r\n          \"period\": {\r\n            \"start\": \"2020-07-05\",\r\n            \"end\": \"2020-07-06\"\r\n          },\r\n          \"reasonCode\": {\r\n            \"coding\": {\r\n              \"system\": \"http://snomed.info/sct\",\r\n              \"code\": \"840533007\",\r\n              \"display\": \"Severe acute respiratory syndrome coronavirus 2 (organism)\"\r\n            }\r\n          }\r\n        },\r\n        \"request\": {\r\n          \"method\": \"PUT\",\r\n          \"url\": \"Encounter?_id=985\"\r\n        }\r\n      },\r\n      {\r\n        \"fullUrl\": \"RiskAssessment/Tele16-3-33\",\r\n        \"resource\": {\r\n          \"resourceType\": \"RiskAssessment\",\r\n          \"identifier\": [\r\n            {\r\n              \"use\": \"official\",\r\n              \"system\": \"http://example.org\",\r\n              \"value\": \"RiskAssessment/Tele16-3-33\"\r\n            }\r\n          ],\r\n          \"basedOn\": {\r\n            \"reference\": \"Task?identifier=Task12345\"\r\n          },\r\n          \"status\": \"preliminary\",\r\n          \"subject\": {\r\n            \"reference\": \"Patient?identifier=Tele16-3-33\"\r\n          },\r\n          \"encounter\": {\r\n            \"reference\": \"Encounter?identifier=Tele16-3-33\"\r\n          },\r\n          \"performer\": {\r\n            \"reference\": \"Organization?identifier=TPO12345\"\r\n          },\r\n          \"prediction\": [\r\n            {\r\n              \"outcome\": {\r\n                \"coding\": [\r\n                  {\r\n                    \"system\": \"http://snomedct.org/\",\r\n                    \"code\": \"78648007\",\r\n                    \"display\": \"At risk for infection\"\r\n                  }\r\n                ],\r\n                \"text\": \"At risk for infection\"\r\n              }\r\n            }\r\n          ],\r\n          \"reasonCode\": [\r\n            {\r\n              \"coding\": [\r\n                {\r\n                  \"system\": \"http://snomedct.org/\",\r\n                  \"code\": \"78648007\",\r\n                  \"display\": \"At risk for infection\"\r\n                }\r\n              ],\r\n              \"text\": \"reason code for this riskassessment\"\r\n            }\r\n          ],\r\n          \"note\": [\r\n            {\r\n              \"text\": \"This risk assessment is based on Covid-19\"\r\n            }\r\n          ]\r\n        },\r\n        \"request\": {\r\n          \"method\": \"POST\",\r\n          \"url\": \"RiskAssessment\"\r\n        }\r\n      },\r\n      {\r\n        \"fullUrl\": \"DocumentReference/Tele16-3-33\",\r\n        \"resource\": {\r\n          \"resourceType\": \"DocumentReference\",\r\n          \"id\": \"example\",\r\n          \"identifier\": [\r\n            {\r\n              \"system\": \"urn:ietf:rfc:3986\",\r\n              \"value\": \"DocumentReference/Tele16-3-33-1\"\r\n            }\r\n          ],\r\n          \"docStatus\": \"preliminary\",\r\n          \"type\": {\r\n            \"coding\": [\r\n              {\r\n                \"system\": \"http://loinc.org\",\r\n                \"code\": \"56446-8\",\r\n                \"display\": \"Appointment summary Document\"\r\n              }\r\n            ]\r\n          },\r\n          \"category\": [\r\n            {\r\n              \"coding\": [\r\n                {\r\n                  \"system\": \"http://ihe.net/xds/connectathon/classCodes\",\r\n                  \"code\": \"11488-4\",\r\n                  \"display\": \"Consult Note\"\r\n                }\r\n              ]\r\n            }\r\n          ],\r\n          \"subject\": {\r\n            \"reference\": \"Patient?identifier=Tele16-3-33\"\r\n          },\r\n          \"date\": \"2005-12-24T09:43:41+11:00\",\r\n          \"author\": [\r\n            {\r\n              \"reference\": \"Organization/Tele16-3-33\"\r\n            }\r\n          ],\r\n          \"description\": \"teleconsult notes\"\r\n        },\r\n        \"request\": {\r\n          \"method\": \"POST\",\r\n          \"url\": \"DocumentReference\"\r\n        }\r\n      }\r\n    ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{serverUrl}}/hapi-fhir-jpaserver/fhir",
+							"host": [
+								"{{serverUrl}}"
+							],
+							"path": [
+								"hapi-fhir-jpaserver",
+								"fhir"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
