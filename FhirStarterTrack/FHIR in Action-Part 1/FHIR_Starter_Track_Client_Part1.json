@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "6b4c0658-a8bf-4d4c-9517-b62804f8ac7c",
+		"name": "FHIR India Connectathon 2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1 Search Patient using First Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://fhir.hl7fundamentals.org/r4/Patient?given=Doe",
+					"protocol": "http",
+					"host": [
+						"fhir",
+						"hl7fundamentals",
+						"org"
+					],
+					"path": [
+						"r4",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "given",
+							"value": "Doe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2 Search Patient using Last Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://fhir.hl7fundamentals.org/r4/Patient?family=Joe",
+					"protocol": "http",
+					"host": [
+						"fhir",
+						"hl7fundamentals",
+						"org"
+					],
+					"path": [
+						"r4",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "family",
+							"value": "Joe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3 Search Patient using Gender",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://fhir.hl7fundamentals.org/r4/Patient?gender=female",
+					"protocol": "http",
+					"host": [
+						"fhir",
+						"hl7fundamentals",
+						"org"
+					],
+					"path": [
+						"r4",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "female"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4 Patient Search using First, Last Name & Gender",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://fhir.hl7fundamentals.org/r4/Patient?given=Doe&family=Joe&gender=female",
+					"protocol": "http",
+					"host": [
+						"fhir",
+						"hl7fundamentals",
+						"org"
+					],
+					"path": [
+						"r4",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "given",
+							"value": "Doe"
+						},
+						{
+							"key": "family",
+							"value": "Joe"
+						},
+						{
+							"key": "gender",
+							"value": "female"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5 Search Using MRN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://fhir.hl7fundamentals.org/r4/Patient?identifier=https://test.org/identifiers/PatientIdentifier|20021986",
+					"protocol": "http",
+					"host": [
+						"fhir",
+						"hl7fundamentals",
+						"org"
+					],
+					"path": [
+						"r4",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "identifier",
+							"value": "https://test.org/identifiers/PatientIdentifier|20021986"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
