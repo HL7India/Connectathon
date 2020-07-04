@@ -1,0 +1,55 @@
+{
+  "resourceType": "RiskAssessment",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://example.org",
+      "value": "RiskAssessment-Covid1-1"
+    }
+  ],
+  "basedOn":{
+      "reference": "Task?identifier=Task12345"
+  },
+  "status": "preliminary",
+   "subject": {
+    "reference": "Patient?identifier=12345"
+  },
+  "encounter":{
+      "reference":"Encounter?idenfifier=Enc12345"
+  },
+  "performer":{
+      "reference":"Organization?identifier=TPO12345"
+  },
+  "prediction": [
+    {
+      "outcome": {
+          "coding": [
+            {
+                "system": "http://snomedct.org/",
+                "code": "78648007",
+                "display": "At risk for infection"
+            }
+            ],
+        "text": "At risk for infection"
+      }
+    }
+  ],
+  "reasonCode":[
+   {  
+       "coding": [
+            {
+                "system": "http://snomedct.org/",
+                "code": "78648007",
+                "display": "At risk for infection"
+            }
+            ],
+            "text":"reason code for this riskassessment"
+   }
+  ],
+ 
+  "note": [
+    {
+      "text": "This risk assessment is based on Covid-19"
+    }
+  ]
+}
