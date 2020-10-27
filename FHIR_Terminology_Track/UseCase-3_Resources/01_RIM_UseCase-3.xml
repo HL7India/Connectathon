@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalInformationMOD>
+	<Patient>
+		<FirstName>Patient</FirstName> 
+		<LastName>C</LastName>
+		<MRN>MRN000003</MRN>
+		<Gender>Male</Gender>
+		<DOB>1982-01-01</DOB>
+		<Address>
+			<Line>House No. 138/5</Line>
+			<City>Bangalore</City>
+			<State>Karnataka</State>
+			<PostalCode>560103</PostalCode>
+			<Country>India</Country>
+		</Address>
+		<PhoneNo>9879854321</PhoneNo>
+		<DocumentType_Adhar>1234-4567-8901</DocumentType_Adhar>
+	</Patient>
+	<Encounter>
+		<VisitID>Visit0003</VisitID> <!--check -->
+		<EncounterStatus>arrived</EncounterStatus>
+		<PatientClass>
+			<Code>ACUTE</Code>
+			<Display>Inpatient Acute</Display>
+			<System>http://terminology.hl7.org/CodeSystem/v3-ActCode</System>
+		</PatientClass>
+		<EncounterReason>
+			<Code>840539006</Code>
+			<Display>Covid-19 Positive</Display>
+			<System>http://snomed.info/sct</System>
+		</EncounterReason>
+		<EncounterDate>2020-07-08T09:00:00</EncounterDate>
+		<EncounterendDate>2020-07-22T09:00:00</EncounterendDate>
+		<Hospitalization>
+			<AdmissionIdentifier>INP12345</AdmissionIdentifier>
+			<AdmissionLocation>Dedicated Covid Health Center, Ward A, BN0003</AdmissionLocation>
+		</Hospitalization>
+	</Encounter>
+	<Conditions>
+		<Condition>
+			<ProblemDescription>
+				<Code>840539006</Code>
+				<Display>Covid-19 Positive</Display>
+				<System>http://snomed.info/sct</System>
+			</ProblemDescription>
+			<ClinicalStatus>
+				<Code>active</Code>
+				<Display>Active</Display>
+				<System>http://terminology.hl7.org/CodeSystem/condition-clinical</System>
+			</ClinicalStatus>
+			<RecordDate>2020-07-22T09:00:00</RecordDate>
+			<VerificationStatus>
+				<Code>resolved</Code>
+				<Display>Resolved</Display>
+				<System>http://terminology.hl7.org/CodeSystem/condition-ver-status</System>
+			</VerificationStatus>
+		</Condition>
+		<Condition>
+			<ProblemDescription>
+				<Code>233604007</Code>
+				<Display>Pneumonia</Display>
+				<System>http://snomed.info/sct</System>
+			</ProblemDescription>
+			<ClinicalStatus>
+				<Code>active</Code>
+				<Display>Active</Display>
+				<System>http://terminology.hl7.org/CodeSystem/condition-clinical</System>
+			</ClinicalStatus>
+			<RecordDate>2020-07-22T09:00:00</RecordDate>
+			<VerificationStatus>
+				<Code>resolved</Code>
+				<Display>Resolved</Display>
+				<System>http://terminology.hl7.org/CodeSystem/condition-ver-status</System>
+			</VerificationStatus>
+		</Condition>
+	</Conditions>
+	<PastHistories>
+		<PastHistory>
+			<ProblemDescription>
+				<Code>73211009</Code>
+				<Display>Diabetes Mellitus</Display>
+				<System>http://snomed.info/sct</System>
+			</ProblemDescription>
+			<ClinicalStatus>
+				<Code>active</Code>
+				<Display>Active</Display>
+				<System>http://terminology.hl7.org/CodeSystem/condition-clinical</System>
+			</ClinicalStatus>
+			<RecordDate>2020-07-22T09:00:00</RecordDate>
+			<VerificationStatus>
+				<Code>confirmed</Code>
+				<Display>Confirmed</Display>
+				<System>http://terminology.hl7.org/CodeSystem/condition-ver-status</System>
+			</VerificationStatus>
+		</PastHistory>
+	</PastHistories>
+
+	<PatientObservations>
+	    <Observation>
+			<ObservationCode>10182-4</ObservationCode>
+			<ObservationDisplay>Travel History</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>No Travel History</ObservationValue>
+			<ObservationUnits></ObservationUnits>
+			<Status>final</Status>
+			<Notes>Patient has not contacted with Covid Infected people</Notes>
+		</Observation>
+	    <Observation>
+			<ObservationCode>135883003</ObservationCode>
+			<ObservationDisplay>Cough with Fever</ObservationDisplay>
+			<ObservationSystem>http://snomed.info/sct</ObservationSystem>
+			<ObservationValue></ObservationValue>
+			<ObservationUnits></ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+	    <Observation>
+			<ObservationCode>267036007</ObservationCode>
+			<ObservationDisplay>Shortness of Breath - Dyspnea </ObservationDisplay>
+			<ObservationSystem>http://snomed.info/sct</ObservationSystem>
+			<ObservationValue></ObservationValue>
+			<ObservationUnits></ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>8867-4</ObservationCode>
+			<ObservationDisplay>Heart Rate</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>76</ObservationValue>
+			<ObservationUnits>bpm</ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>9279-1</ObservationCode>
+			<ObservationDisplay>Respiratory Rate</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>16</ObservationValue>
+			<ObservationUnits>/min</ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>8310-5</ObservationCode>
+			<ObservationDisplay>Body Temperature</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>102</ObservationValue>
+			<ObservationUnits>F</ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>8480-6</ObservationCode>
+			<ObservationDisplay>Systolic Blood Pressure</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>128</ObservationValue>
+			<ObservationUnits>mmHg</ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>8462-4</ObservationCode>
+			<ObservationDisplay>Diastolic Blood Pressure</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>84</ObservationValue>
+			<ObservationUnits>mmHg</ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>59408-5</ObservationCode>
+			<ObservationDisplay>Oxygen Saturation</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>96</ObservationValue>
+			<ObservationUnits>%O2</ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>94309-2</ObservationCode>
+			<ObservationDisplay>RT-PCR Covid-19 Test</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>Negative</ObservationValue>
+			<ObservationUnits></ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>301708006</ObservationCode>
+			<ObservationDisplay>Chest Clear</ObservationDisplay>
+			<ObservationSystem>http://snomed.info/sct</ObservationSystem>
+			<ObservationValue>Chest Clear</ObservationValue>
+			<ObservationUnits></ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+		<Observation>
+			<ObservationCode>57782-5</ObservationCode>
+			<ObservationDisplay>CBC with DLC</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>HB-12, TLC-6000, P-70, L-28, M-0, E-2, P-1.5Lakhs</ObservationValue>
+			<ObservationUnits></ObservationUnits>
+			<Status>final</Status>
+		</Observation>
+	</PatientObservations>
+    <DiagnosticReport>
+		<DiagnosticReportCategory>
+			<Code>LAB</Code>
+			<Display>Laboratory</Display>
+			<System>http://terminology.hl7.org/CodeSystem/v2-0074</System>
+		</DiagnosticReportCategory>
+		<DiagnosticReportDetails>
+			<Code>57782-5</Code>
+			<Display>CBC with DLC</Display>
+			<System>http://loinc.org</System>
+		</DiagnosticReportDetails>
+		<Status>final</Status>
+		<ReportDate>2020-07-22T09:00:00</ReportDate>
+    </DiagnosticReport>
+	<DiagnosticReport>
+		<DiagnosticReportCategory>
+			<Code>LAB</Code>
+			<Display>Laboratory</Display>
+			<System>http://snomed.info/sct</System>
+		</DiagnosticReportCategory>
+		<DiagnosticReportDetails>
+			<Code>94309-2</Code>
+			<Display>RT-PCR Covid-19 Test</Display>
+			<System>http://loinc.org</System>
+		</DiagnosticReportDetails>
+		<Status>final</Status>
+		<ReportDate>2020-07-22T09:00:00</ReportDate>
+	</DiagnosticReport>
+	<DiagnosticReport>
+		<DiagnosticReportCategory>
+			<Code>RAD</Code>
+			<Display>Radiology</Display>
+			<System>http://snomed.info/sct</System>
+		</DiagnosticReportCategory>
+		<DiagnosticReportDetails>
+			<Code>42165-1</Code>
+			<Display>infiltration of lower lobes at periphery of lungs</Display>
+			<System>http://loinc.org</System>
+		</DiagnosticReportDetails>
+		<Status>final</Status>
+		<ReportDate>2020-07-22T09:00:00</ReportDate>
+	</DiagnosticReport>
+	<Procedure>
+        <Status>completed</Status>
+        <ProcedureCode>
+            <Code>57485005</Code>
+            <Display>Oxygen Therapy</Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCode>
+        <ProcedureCategory>
+            <Code></Code>
+            <Display></Display>
+            <System></System>
+        </ProcedureCategory>
+        <BodySite>
+            <Code></Code>
+            <Display></Display>
+            <System></System>
+        </BodySite>
+        <Note>Oxygen Therapy 5 lt. per min.</Note>
+    </Procedure>
+	<MedicationStatement>
+        <Status>completed</Status>
+        <Category>
+			<Code>322236009</Code>
+			<Display>Paracetamol 500mg</Display>
+			<System>http://snomed.info/sct</System>
+        </Category>
+        <StatementDate>2020-07-22T09:00:00</StatementDate>
+        <Note></Note>
+        <Dosage>
+            <Text></Text>
+        </Dosage>       
+    </MedicationStatement>
+    <MedicationStatement>
+        <Status>active</Status>
+        <Category>
+			<Code>43706004</Code>
+			<Display>Vitamin C</Display>
+			<System>http://snomed.info/sct</System>
+        </Category>
+        <StatementDate>2020-07-22T09:00:00</StatementDate>
+        <Note></Note>
+        <Dosage>
+            <Text>Twice a Day</Text>
+        </Dosage>       
+    </MedicationStatement>
+</ClinicalInformationMOD>

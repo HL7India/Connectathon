@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalInformationMOD>
+   <Patient>
+      <FirstName>John</FirstName>
+      <LastName>C</LastName>
+      <MRN>MRN00003</MRN>
+      <Gender>Male</Gender>
+      <DOB>2020-06-25</DOB>
+      <Address>
+         <Line>House No. 138/5</Line>
+         <City>Bangalore</City>
+         <State>Karnataka</State>
+         <PostalCode>560103</PostalCode>
+         <Country>India</Country>
+      </Address>
+      <PhoneNo>9879854321</PhoneNo>
+	  <extension>
+		<Birthplace>Apollo Care, Pune, Maharashtra</Birthplace>
+	  </extension>
+      <DocumentType_Adhar>1234-4567-8901</DocumentType_Adhar>
+   </Patient>
+   <RelatedPerson>
+	  <FirstName>Ram</FirstName>
+      <LastName>C</LastName>
+      <ID>ID123</ID>
+	  <Relationship>
+	     <Code>FTH</Code>
+         <Display>Father</Display>
+         <System>http://terminology.hl7.org/CodeSystem/v2-0131</System>
+	  </Relationship>
+   </RelatedPerson>
+   <RelatedPerson>
+	  <FirstName>Anupriya</FirstName>
+      <LastName>C</LastName>
+      <ID>ID567</ID>
+	  <Relationship>
+	     <Code>MTH</Code>
+         <Display>Mother</Display>
+         <System>http://terminology.hl7.org/CodeSystem/v2-0131</System>
+	  </Relationship>
+   </RelatedPerson>
+   <Encounter>
+      <VisitID>Visit001</VisitID>
+      <EncounterStatus>arrived</EncounterStatus>
+      <PatientClass>
+         <Code>Outpatient</Code>
+         <Display>Outpatient</Display>
+         <System>http://terminology.hl7.org/CodeSystem/v3-ActCode</System>
+      </PatientClass>
+      <EncounterReason>
+         <Code>410620009</Code>
+         <Display>Well Child Visit(Procedure)</Display>
+         <System>http://snomed.info/sct</System>
+      </EncounterReason>
+      <EncounterDate>2020-08-07T09:00:00</EncounterDate>
+      <Hospitalization>
+         <AdmissionIdentifier></AdmissionIdentifier>
+         <AdmissionLocation></AdmissionLocation>
+      </Hospitalization>
+   </Encounter>
+   <Conditions>
+      <Condition>
+         <ProblemDescription>
+            <Code>410620009</Code>
+            <Display>Well Child Visit(Procedure)</Display>
+            <System>http://snomed.info/sct</System>
+         </ProblemDescription>
+         <ClinicalStatus>
+            <Code>active</Code>
+            <Display>Active</Display>
+            <System>http://terminology.hl7.org/CodeSystem/condition-clinical</System>
+         </ClinicalStatus>
+         <RecordDate>2020-08-07T09:00:00</RecordDate>
+         <VerificationStatus>
+            <Code>confirmed</Code>
+            <Display>Confirmed</Display>
+            <System>http://terminology.hl7.org/CodeSystem/condition-ver-status</System>
+         </VerificationStatus>
+      </Condition>
+   </Conditions>
+   <PastHistories>
+      <PastHistory>
+         <ProblemDescription>
+            <Code>394698008</Code>
+            <Display>Birth History</Display>
+            <System>http://snomed.info/sct</System>
+         </ProblemDescription>
+         <ClinicalStatus>
+            <Code>resolved</Code>
+            <Display>Resolved</Display>
+            <System>http://terminology.hl7.org/CodeSystem/condition-clinical</System>
+         </ClinicalStatus>
+         <RecordDate>2020-06-25T09:00:00</RecordDate>
+         <VerificationStatus>
+            <Code>confirmed</Code>
+            <Display>Confirmed</Display>
+            <System>http://terminology.hl7.org/CodeSystem/condition-ver-status</System>
+         </VerificationStatus>
+      </PastHistory>
+	  <Procedure>
+        <Status>completed</Status>
+        <ProcedureCode>
+            <Code>177184002</Code>
+            <Display>Normal Delivery Procedure</Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCode>
+        <ProcedureCategory>
+            <Code>387713003</Code>
+            <Display>Surgical Procedure</Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCategory>
+        <BodySite>
+            <Code></Code>
+            <Display></Display>
+            <System></System>
+        </BodySite>
+        <Note></Note>
+      </Procedure>	
+	  <Procedure>
+        <Status>completed</Status>
+        <ProcedureCode>
+            <Code>35683002</Code>
+            <Display>Photo Therapy</Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCode>
+        <ProcedureCategory>
+            <Code>387713003</Code>
+            <Display>Surgical Procedure</Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCategory>
+        <BodySite>
+            <Code></Code>
+            <Display></Display>
+            <System></System>
+        </BodySite>
+        <Note></Note>
+      </Procedure>	
+   </PastHistories>
+	<FamilyMemberHistories>
+		<FamilyMemberHistory>
+			 <MemberName>Mr. Ram</MemberName> 
+			<Status>completed</Status>
+			<RecordedDate>2020-07-01T14:44:12</RecordedDate>
+			<Relationship>
+				<Code>FTH</Code>
+				<Display>Father</Display>
+				<System>http://terminology.hl7.org/CodeSystem/v3-RoleCode</System>
+			</Relationship>
+			<Gender>Female</Gender>
+			 <DOB>1954-01-02</DOB>
+			<Condition>
+				<Code>38341003</Code>
+				<Display>Hypertension</Display>
+				<System>http://snomed.info/sct</System>
+			</Condition>
+		</FamilyMemberHistory>
+	</FamilyMemberHistories>
+   <PatientObservations>
+      <Observation>
+         <ObservationCode>364741000</ObservationCode>
+         <ObservationDisplay>APGAR-1 Min (Finding)</ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <Status>final</Status>
+      </Observation>
+	  <Observation>
+         <ObservationCode>364742007</ObservationCode>
+         <ObservationDisplay>APGAR-5 Min (Finding)</ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <Status>final</Status>
+      </Observation>
+      <Observation>
+         <ObservationCode>57036006</ObservationCode>
+         <ObservationDisplay>Gestational Age</ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <Status>final</Status>
+      </Observation>
+      <Observation>
+         <ObservationCode>8339-4</ObservationCode>
+         <ObservationDisplay>Birth Weight</ObservationDisplay>
+         <ObservationSystem>http://loinc.org</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <Status>final</Status>
+      </Observation>
+      <Observation>
+         <ObservationCode>365636006</ObservationCode>
+         <ObservationDisplay>Mother Blood Group</ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <Status>final</Status>
+      </Observation>
+      <Observation>
+         <ObservationCode>365636006</ObservationCode>
+         <ObservationDisplay>Baby Blood Group</ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <Status>final</Status>
+      </Observation>
+      <Observation>
+         <ObservationCode>409586006</ObservationCode>
+         <ObservationDisplay>Complaint Finding</ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <ObservationValue>0</ObservationValue>
+         <Status>final</Status>
+      </Observation>
+	  <Observation>
+			<ObservationCode>29463-7</ObservationCode>
+			<ObservationDisplay>Body Weight</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>5.5</ObservationValue>
+			<ObservationUnits>kg</ObservationUnits>
+			<Status>final</Status>
+	  </Observation>
+	  <Observation>
+			<ObservationCode>8306-3</ObservationCode>
+			<ObservationDisplay>Body Height Lying</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>60</ObservationValue>
+			<ObservationUnits>cm</ObservationUnits>
+			<Status>final</Status>
+	  </Observation>
+	  <Observation>
+			<ObservationCode>9843-4</ObservationCode>
+			<ObservationDisplay>Head Circumference</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>39</ObservationValue>
+			<ObservationUnits>cm</ObservationUnits>
+			<Status>final</Status>
+	  </Observation>
+	  <Observation>
+			<ObservationCode>8310-5</ObservationCode>
+			<ObservationDisplay>Body Temperature</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>98.6</ObservationValue>
+			<ObservationUnits>F</ObservationUnits>
+			<Status>final</Status>
+	  </Observation>
+	  <Observation>
+			<ObservationCode>9279-1</ObservationCode>
+			<ObservationDisplay>Respiratory Rate</ObservationDisplay>
+			<ObservationSystem>http://loinc.org</ObservationSystem>
+			<ObservationValue>36</ObservationValue>
+			<ObservationUnits>/min</ObservationUnits>
+			<Status>final</Status>
+	  </Observation>
+	  <Observation>
+		<ObservationCode>8867-4</ObservationCode>
+		<ObservationDisplay>Heart Rate</ObservationDisplay>
+		<ObservationSystem>http://loinc.org</ObservationSystem>
+		<ObservationValue>100</ObservationValue>
+		<ObservationUnits>bpm</ObservationUnits>
+		<Status>final</Status>
+	  </Observation>
+      <Observation>
+         <ObservationCode>271649006</ObservationCode>
+         <ObservationDisplay>Systolic Blood Pressure</ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <ObservationUnits>mmHg</ObservationUnits>
+         <Status>final</Status>
+      </Observation>
+      <Observation>
+         <ObservationCode>271650006</ObservationCode>
+         <ObservationDisplay>Diastolic Blood Pressure</ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <ObservationUnits>mmHg</ObservationUnits>
+         <Status>final</Status>
+      </Observation>
+   </PatientObservations>
+   <PatientRequests>
+      <ServiceRequest>
+         <Status>completed</Status>
+         <Intent>order</Intent>
+         <ServiceRequestDetails>
+             <Code></Code>
+             <Display></Display>
+             <System>http://snomed.info/sct</System>
+         </ServiceRequestDetails>
+         <ServiceDate />
+      </ServiceRequest>
+   </PatientRequests>
+   <DiagnosticReport>
+      <DiagnosticReportCategory>
+         <Code>LAB</Code>
+         <Display>Laboratory</Display>
+         <System>http://snomed.info/sct</System>
+      </DiagnosticReportCategory>
+      <DiagnosticReportDetails>
+         <Code />
+         <Display />
+         <System>http://loinc.org</System>
+      </DiagnosticReportDetails>
+      <Status>final</Status>
+      <ReportDate />
+   </DiagnosticReport>
+   <DiagnosticReport>
+      <DiagnosticReportCategory>
+         <Code>RAD</Code>
+         <Display>Radiology</Display>
+         <System>http://snomed.info/sct</System>
+      </DiagnosticReportCategory>
+      <DiagnosticReportDetails>
+         <Code />
+         <Display />
+         <System>http://loinc.org</System>
+      </DiagnosticReportDetails>
+      <Status>final</Status>
+      <ReportDate />
+   </DiagnosticReport>
+   <Procedure>
+        <Status>in-progress</Status>
+        <ProcedureCode>
+            <Code>408884008</Code>
+            <Display>Breast Feeding Advice</Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCode>
+        <ProcedureCategory>
+            <Code>409073007</Code>
+            <Display>Education</Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCategory>
+        <BodySite>
+            <Code></Code>
+            <Display></Display>
+            <System></System>
+        </BodySite>
+        <Note></Note>
+   </Procedure>
+   <MedicationRequest>
+      <Status>active</Status>
+      <Intent>plan</Intent>
+      <MedicationRequestDetails>
+         <Code>322238005</Code>
+         <Display>Paracetamol Drops 24mg per ml</Display>
+         <System>http://snomed.info/sct</System>
+      </MedicationRequestDetails>
+   </MedicationRequest>
+   <ImmunizationRecommendation>
+		<Date>2020-08-07T14:44:12</Date>
+		<Recommendation>
+			<VaccineCode>
+				<Code>399014008</Code>
+				<Display>DTP Vaccine</Display>
+				<System>http://snomed.info/sct</System>
+			</VaccineCode>
+			<ForecastStatus>
+				<Code>complete</Code>
+				<Display>Complete</Display>
+				<System>http://snomed.info/sct</System>
+			</ForecastStatus>
+		</Recommendation>
+   </ImmunizationRecommendation>
+   <Appointment>
+      <AppointmentID />
+      <AppointmentStatus>proposed</AppointmentStatus>
+      <AppointmentDate>2020-09-04T14:44:12</AppointmentDate>
+   </Appointment>
+</ClinicalInformationMOD>

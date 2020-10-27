@@ -1,0 +1,125 @@
+{
+  "resourceType": "Bundle",
+  "id": "e9dddef0-029e-49c0-803b-a25fe7f89ded",
+  "type": "transaction-response",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://fhir.hl7fundamentals.org/r4"
+    }
+  ],
+  "entry": [
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Patient/161375/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Encounter/161376/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Condition/161377/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161378/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161379/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161380/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161381/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161382/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161383/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161384/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161385/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161386/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "MedicationRequest/161387/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "MedicationRequest/161388/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T00:58:09.624+00:00"
+      }
+    }
+  ]
+}

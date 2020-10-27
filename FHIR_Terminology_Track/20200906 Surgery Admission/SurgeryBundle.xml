@@ -1,0 +1,192 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="ebd871e7-2299-425f-b8ca-eb6ce3d88872"/>
+    <type value="transaction-response"/>
+    <link>
+        <relation value="self"/>
+        <url value="http://fhir.hl7fundamentals.org/r4"/>
+    </link>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Patient/189279/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Encounter/189280/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Condition/189281/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Condition/189282/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="FamilyMemberHistory/189283/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189284/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189285/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189286/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189287/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189288/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189289/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189290/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189291/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189292/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189293/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189294/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189295/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189296/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189297/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/189298/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="DiagnosticReport/189299/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="DiagnosticReport/189300/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Procedure/189301/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2020-08-08T14:18:17.351+00:00"/>
+        </response>
+    </entry>
+</Bundle>

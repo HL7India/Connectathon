@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalInformationMOD>
+   <!--Patient Resource START-->
+   <Patient>					<!--Section for Patient Details-->
+      <FirstName></FirstName>
+      <LastName></LastName>
+      <MRN></MRN>
+      <Gender></Gender>
+      <DOB></DOB>
+      <Address>
+         <Line></Line>
+         <City></City>
+         <State></State>
+         <PostalCode></PostalCode>
+         <Country></Country>
+      </Address>
+      <PhoneNo></PhoneNo>
+      <DocumentType_Adhar></DocumentType_Adhar>
+   </Patient>
+   <!--Patient Resource END-->
+   <!--Encounter Resource START-->
+   <Encounter>						<!--Section for Visit Details-->
+      <VisitID></VisitID>
+      <EncounterStatus></EncounterStatus>
+      <PatientClass>
+         <Code></Code>
+         <Display></Display>
+         <System>http://terminology.hl7.org/CodeSystem/v3-ActCode</System>
+      </PatientClass>
+      <EncounterReason>
+         <Code></Code>
+         <Display></Display>
+         <System>http://snomed.info/sct</System>
+      </EncounterReason>
+      <EncounterDate></EncounterDate>
+   </Encounter>
+   <!--Encounter Resource END-->
+   <!--Chief Complaints (Observation) Resource START-->
+   <ChiefComplaints>			   <!--Section for Chief Complaints-->
+      <Observation>
+         <ObservationCode></ObservationCode>
+         <ObservationDisplay></ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <Status></Status>
+      </Observation>
+   </ChiefComplaints>	
+   <!--Chief Complaints (Observation) Resource END-->   
+   <!--Condition Resource START-->
+   <Conditions>           			<!--Section for Final Diagnosis-->
+      <Condition>
+         <ProblemDescription>
+            <Code></Code>
+            <Display></Display>
+            <System>http://snomed.info/sct</System>
+         </ProblemDescription>
+         <ClinicalStatus>
+            <Code></Code>
+            <Display></Display>
+            <System>http://terminology.hl7.org/CodeSystem/condition-clinical</System>
+         </ClinicalStatus>
+         <RecordDate></RecordDate>
+         <VerificationStatus>
+            <Code></Code>
+            <Display></Display>
+            <System>http://terminology.hl7.org/CodeSystem/condition-ver-status</System>
+         </VerificationStatus>
+      </Condition>
+   </Conditions>
+   <!--Condition Resource END-->
+   <!--PastHistory (Condition) Resource START-->
+   <PastHistories>				<!--Section for Past Medical History-->
+      <PastHistory>
+         <ProblemDescription>
+            <Code></Code>
+            <Display></Display>
+            <System>http://snomed.info/sct</System>
+         </ProblemDescription>
+         <ClinicalStatus>
+            <Code></Code>
+            <Display></Display>
+            <System>http://terminology.hl7.org/CodeSystem/condition-clinical</System>
+         </ClinicalStatus>
+         <RecordDate></RecordDate>
+         <VerificationStatus>
+            <Code></Code>
+            <Display></Display>
+            <System>http://terminology.hl7.org/CodeSystem/condition-ver-status</System>
+         </VerificationStatus>
+      </PastHistory>
+   </PastHistories>
+   <!--PastHistory (Condition) Resource END-->
+   <!--FamilyMemberHistory Resource START-->
+   <FamilyMemberHistory>					<!--Section for Family Medical History-->
+        <Status></Status>
+		<Relationship>
+            <Code></Code>
+            <Display></Display>
+            <System>http://terminology.hl7.org/CodeSystem/v3-RoleCode</System>
+        </Relationship>
+        <ConditionCode>
+            <Code></Code>
+            <Display></Display>
+            <System>http://snomed.info/sct</System>
+        </ConditionCode>
+        <Note></Note>
+   </FamilyMemberHistory>
+   <!--FamilyMemberHistory Resource END-->
+   <!--Examination (Observation) Resource START-->
+   <PatientExaminations>				<!--Section for different Examination-->
+      <Observation>
+         <ObservationCode></ObservationCode>
+         <ObservationDisplay></ObservationDisplay>
+         <ObservationSystem>http://loinc.org</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <ObservationUnits></ObservationUnits>
+         <Status></Status>
+      </Observation>
+   </PatientExaminations>
+   <!--Examination (Observation) Resource END-->
+   <!--ServiceRequest Resource START-->
+   <PatientRequests>				<!--Section for LAB and RAD Service Request-->
+	   <ServiceRequest>
+		  <Status></Status>
+		  <Intent></Intent>
+		  <ServiceRequestDetails>
+			 <Code></Code>
+			 <Display></Display>
+			 <System>http://snomed.info/sct</System>
+		  </ServiceRequestDetails>
+		  <ServiceDate></ServiceDate>
+	   </ServiceRequest>
+   </PatientRequests>
+   <!--ServiceRequest Resource END-->
+   <!--DiagnosticReport Resource START-->
+   <DiagnosticReports>	
+	   <DiagnosticReport>						<!--Section for LAB and RAD Reports-->
+		  <DiagnosticReportCategory>
+			 <Code></Code>
+			 <Display></Display>
+			 <System>http://terminology.hl7.org/CodeSystem/v2-0074</System>
+		  </DiagnosticReportCategory>
+		  <DiagnosticReportDetails>
+			 <Code></Code>
+			 <Display></Display>
+			 <System>http://loinc.org</System>
+		  </DiagnosticReportDetails>
+		  <Status></Status>
+		  <ReportDate></ReportDate>
+	   </DiagnosticReport>
+   </DiagnosticReports>	
+   <!--DiagnosticReport Resource END-->
+   <!--Observation Resource START-->
+   <PatientObservations>				<!--Section for Observations corresponding to Test performed-->
+      <Observation>
+         <ObservationCode></ObservationCode>
+         <ObservationDisplay></ObservationDisplay>
+         <ObservationSystem>http://snomed.info/sct</ObservationSystem>
+         <Status></Status>
+      </Observation>
+      <Observation>
+         <ObservationCode></ObservationCode>
+         <ObservationDisplay></ObservationDisplay>
+         <ObservationSystem>http://loinc.org</ObservationSystem>
+         <ObservationValue></ObservationValue>
+         <ObservationUnits></ObservationUnits>
+         <Status></Status>
+      </Observation>
+   </PatientObservations>
+   <!--Observation Resource END-->
+   <!--Procedure Resource START-->
+   <Procedure>						<!--Section for Procedures-->
+        <Status></Status>
+        <ProcedureCode>
+            <Code></Code>
+            <Display></Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCode>
+        <ProcedureCategory>
+            <Code></Code>
+            <Display></Display>
+            <System>http://snomed.info/sct</System>
+        </ProcedureCategory>
+        <BodySite>
+            <Code></Code>
+            <Display></Display>
+            <System>http://snomed.info/sct</System>
+        </BodySite>
+        <Note></Note>
+   </Procedure>
+   <!--Procedure Resource END-->
+   <!--MedicationStatement Resource START-->
+   <MedicationStatement>						<!--Section for ongoing medications-->
+        <Status></Status>
+        <Category>
+            <Code></Code>
+            <Display></Display>
+            <System>http://terminology.hl7.org/CodeSystem/medication-statement-category</System>
+        </Category>
+        <Medication>
+            <Code></Code>
+            <Display></Display>
+            <System>http://snomed.info/sct</System>
+        </Medication>
+        <StatementDate></StatementDate>
+        <Note></Note>
+        <Dosage>
+            <Text></Text>
+        </Dosage>       
+   </MedicationStatement>
+   <!--MedicationStatement Resource END-->
+   <!--MedicationRequest Resource START-->
+   <MedicationRequest>						<!--Section for prescribed medications-->
+      <Status></Status>
+      <Intent></Intent>
+      <MedicationRequestDetails>
+         <Code></Code>
+         <Display></Display>
+         <System>http://snomed.info/sct</System>
+      </MedicationRequestDetails>
+   </MedicationRequest>
+   <!--MedicationRequest Resource END-->
+</ClinicalInformationMOD>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <entry>
+        <fullUrl value="Patient/MRN00003"/>
+        <resource>
+            <Patient>
+                <identifier>
+                    <use value="official"/>
+                    <value value="MRN00003"/>
+                </identifier>
+                <identifier>
+                    <use value="secondary"/>
+                    <value value="1234-4556-7788"/>
+                </identifier>
+                <name>
+                    <given value="PatientB"/>
+                </name>
+                <telecom>
+                    <value value="9870654321"/>
+                    <use value="home"/>
+                </telecom>
+                <gender value="female"/>
+                <birthDate value="1980-07-04"/>
+                <address>
+                    <line value="Manyata Tech Park"/>
+                    <city value="Bangalore"/>
+                    <state value="Karnataka"/>
+                    <postalCode value="560103"/>
+                    <country value="India"/>
+                </address>
+            </Patient>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Patient"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Encounter/Visiteam00003"/>
+        <resource>
+            <Encounter>
+                <identifier>
+                    <value value="Visiteam00003"/>
+                </identifier>
+                <status value="arrived"/>
+                <class>
+                    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+                    <code value="NONAC"/>
+                    <display value="inpatient non-acute"/>
+                </class>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <period>
+                    <start value="2020-07-06T14:44:12"/>
+                </period>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="840539006"/>
+                        <display value="Covid-19"/>
+                    </coding>
+                </reasonCode>
+                <hospitalization>
+                    <preAdmissionIdentifier>
+                        <value value="12345 "/>
+                    </preAdmissionIdentifier>
+                </hospitalization>
+                <location>
+                    <location>
+                        <identifier>
+                            <value value="COVID Care Center, Bangalore"/>
+                        </identifier>
+                    </location>
+                </location>
+            </Encounter>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Encounter"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Condition/0e0849ac-a1a2-43ae-a2f7-64b8013b123f"/>
+        <resource>
+            <Condition>
+                <identifier>
+                    <value value="0e0849ac-a1a2-43ae-a2f7-64b8013b123f"/>
+                </identifier>
+                <clinicalStatus>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+                        <code value="active"/>
+                        <display value="Active"/>
+                    </coding>
+                </clinicalStatus>
+                <verificationStatus>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+                        <code value="confirmed"/>
+                        <display value="Confirmed"/>
+                    </coding>
+                </verificationStatus>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="840539006"/>
+                        <display value="COVID-19"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <onsetDateTime value="2020-07-08T14:44:12"/>
+            </Condition>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Condition"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/7575a543-a89b-4fc4-8a0d-0ea7a9528df0"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="7575a543-a89b-4fc4-8a0d-0ea7a9528df0"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="135883003"/>
+                        <display value="Cough with Fever"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/7410b8e3-7aec-4a24-b1c1-f0e65d3f02e5"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="7410b8e3-7aec-4a24-b1c1-f0e65d3f02e5"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8867-4"/>
+                        <display value="Heart Rate"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <valueQuantity>
+                    <value value="90"/>
+                    <unit value="bpm"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/c4f5d3e9-0b60-4558-b5c6-1b6c20b2fe1e"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="c4f5d3e9-0b60-4558-b5c6-1b6c20b2fe1e"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="9279-1"/>
+                        <display value="Respiratory Rate"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <valueQuantity>
+                    <value value="22"/>
+                    <unit value="/min"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/27da4252-1ccf-4a1c-9fb0-44c29c3ac076"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="27da4252-1ccf-4a1c-9fb0-44c29c3ac076"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8310-5"/>
+                        <display value="Body Temperature"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <valueQuantity>
+                    <value value="101"/>
+                    <unit value="F"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/a4e376ae-4eea-4c09-8c7c-5a7c44358d6e"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="a4e376ae-4eea-4c09-8c7c-5a7c44358d6e"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8480-6"/>
+                        <display value="Systolic Blood Pressure"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <valueQuantity>
+                    <value value="120"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/95c8256e-12a5-40c7-b3c4-0fb78531d971"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="95c8256e-12a5-40c7-b3c4-0fb78531d971"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8462-4"/>
+                        <display value="Diastolic Blood Pressure"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <valueQuantity>
+                    <value value="80"/>
+                    <unit value="mmHg"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/e1ac1c0c-8560-48b9-bce3-087ca5202c47"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="e1ac1c0c-8560-48b9-bce3-087ca5202c47"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="59408-5"/>
+                        <display value="Oxygen Saturation"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <valueQuantity>
+                    <value value="90"/>
+                    <unit value="%O2"/>
+                </valueQuantity>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/5af92ca8-ee1e-4640-8b78-fa32d06796fb"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="5af92ca8-ee1e-4640-8b78-fa32d06796fb"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="162966008"/>
+                        <display value="Fine Crepitations"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <valueString value="Fine Crepitations"/>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="Observation/96be466f-514d-4d05-ae83-67840b97b1d6"/>
+        <resource>
+            <Observation>
+                <identifier>
+                    <value value="96be466f-514d-4d05-ae83-67840b97b1d6"/>
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="24648-8"/>
+                        <display value="Chest X-Ray"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+                <valueString value="Bilateral Infiltrates"/>
+            </Observation>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="MedicationRequest/965898e5-730f-4411-aeca-2ba2d026986e"/>
+        <resource>
+            <MedicationRequest>
+                <identifier>
+                    <value value="965898e5-730f-4411-aeca-2ba2d026986e"/>
+                </identifier>
+                <status value="active"/>
+                <intent value="plan"/>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="322236009"/>
+                        <display value="Paracetamol 500 mg oral tablet"/>
+                    </coding>
+                </medicationCodeableConcept>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+            </MedicationRequest>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="MedicationRequest"/>
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="MedicationRequest/f053c17f-5e9c-49e6-91fe-c455b2c63566"/>
+        <resource>
+            <MedicationRequest>
+                <identifier>
+                    <value value="f053c17f-5e9c-49e6-91fe-c455b2c63566"/>
+                </identifier>
+                <status value="active"/>
+                <intent value="plan"/>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="774528007"/>
+                        <display value="Ambroxol Syrup"/>
+                    </coding>
+                </medicationCodeableConcept>
+                <subject>
+                    <reference value="Patient/MRN00003"/>
+                </subject>
+            </MedicationRequest>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="MedicationRequest"/>
+        </request>
+    </entry>
+</Bundle>

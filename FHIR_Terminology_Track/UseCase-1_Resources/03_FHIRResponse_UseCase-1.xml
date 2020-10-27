@@ -1,0 +1,125 @@
+{
+  "resourceType": "Bundle",
+  "id": "be9f3357-e35b-46df-bf72-d925795562a3",
+  "type": "transaction-response",
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://fhir.hl7fundamentals.org/r4"
+    }
+  ],
+  "entry": [
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Patient/161389/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Encounter/161390/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Condition/161391/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Condition/161392/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Condition/161393/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Condition/161394/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161395/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161396/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161397/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161398/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161399/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161400/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "Observation/161401/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    },
+    {
+      "response": {
+        "status": "201 Created",
+        "location": "MedicationRequest/161402/_history/1",
+        "etag": "1",
+        "lastModified": "2020-07-05T01:01:57.822+00:00"
+      }
+    }
+  ]
+}
